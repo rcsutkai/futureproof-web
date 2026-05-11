@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /presentations/theorema-intel/
+
+User-agent: *
+Disallow: /dashboard/
