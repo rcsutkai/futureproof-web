@@ -3,3 +3,6 @@ Disallow: /presentations/theorema-intel/
 
 User-agent: *
 Disallow: /dashboard/
+
+User-agent: *
+Disallow: /presentations/tropic-square-fw-sourcing/
