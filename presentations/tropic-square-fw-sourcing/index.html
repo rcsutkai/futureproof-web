@@ -9,3 +9,2471 @@
     gtag('js', new Date());
     gtag('config', 'G-W59JY04ZS3');
   </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Senior Firmware Engineer — Tropic Square / TROPIC01 Sourcing Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --g:#1d1d1f;--g90:#2d2d2f;--g70:#4a4a4d;--g40:#8e8e93;--g15:#d8d8da;--g07:#f0f0f2;--g04:#f7f7f8;
+  --ac:#2a788e;--acl:#d4eef4;--acd:#1d566a;
+  --v1:#fde725;--v2:#7ad151;--v3:#22a884;--v4:#2a788e;--v5:#414487;
+  --grey:#e8e8e8;--core-bg:#f0f7f9;
+  --ff:'Inter',system-ui,sans-serif;--fm:'JetBrains Mono','Consolas',monospace;
+  --r:6px;--sh:0 1px 4px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.06);--shp:-4px 0 24px rgba(0,0,0,.12)
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff);background:#fff;color:var(--g);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--ac);text-decoration:none}a:hover{text-decoration:underline}
+code,pre{font-family:var(--fm)}
+
+/* LAYOUT */
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:72px 0}
+section+section{border-top:1px solid var(--g15)}
+.slabel{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin-bottom:10px}
+.stitle{font-size:26px;font-weight:700;color:var(--g);margin-bottom:8px;line-height:1.25}
+.ssub{font-size:15px;color:var(--g70);margin-bottom:40px;max-width:680px}
+
+/* NAV */
+#snav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--g15)}
+.nav-i{max-width:1180px;margin:0 auto;display:flex;height:52px;overflow-x:auto;scrollbar-width:none;padding:0 24px}
+.nav-i::-webkit-scrollbar{display:none}
+.nav-i a{font-size:12px;font-weight:500;color:var(--g70);white-space:nowrap;padding:0 14px;height:52px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.nav-i a:hover{color:var(--g);border-bottom-color:var(--ac);text-decoration:none}
+
+/* HERO */
+#hero{padding:88px 0 64px;background:var(--g);border-top:none}
+.h-eye{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ac);margin-bottom:16px}
+.h-title{font-size:clamp(28px,4vw,44px);font-weight:700;line-height:1.15;max-width:800px;margin-bottom:24px;color:#fff}
+.h-title span{color:var(--v3)}
+.h-stats{display:flex;gap:40px;margin-bottom:32px;flex-wrap:wrap}
+.h-sn{font-size:36px;font-weight:700;color:#fff;line-height:1}
+.h-sl{font-size:12px;color:rgba(255,255,255,.55);margin-top:4px;font-weight:500}
+.h-desc{font-size:16px;line-height:1.7;color:rgba(255,255,255,.75);max-width:680px}
+.h-desc strong{color:#fff}
+
+/* ROLE */
+.rbullets{list-style:none;display:flex;flex-direction:column;gap:14px;max-width:860px}
+.rbullets li{display:flex;gap:14px;align-items:flex-start;background:var(--g04);border:1px solid var(--g15);border-left:3px solid var(--ac);border-radius:var(--r);padding:14px 18px;font-size:14.5px;line-height:1.5}
+.blabel{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ac);white-space:nowrap;min-width:130px;padding-top:1px}
+
+/* MAP */
+#map-section{padding:72px 0 0}
+.map-wrap{position:relative;background:var(--g04);border:1px solid var(--g15);border-radius:var(--r);overflow:hidden}
+#svg-con{width:100%;line-height:0}
+#svg-con svg{width:100%;height:auto;display:block}
+.map-leg{display:flex;align-items:center;gap:8px;padding:12px 20px;border-top:1px solid var(--g15);flex-wrap:wrap}
+.leg-lbl{font-size:11px;color:var(--g70);font-weight:500;margin-right:4px}
+.sw{width:22px;height:12px;border-radius:2px;display:inline-block}
+.lt{font-size:11px;color:var(--g70);margin-right:8px}
+.lsep{width:1px;height:12px;background:var(--g15);margin:0 8px}
+
+/* TOOLTIP */
+#tt{position:fixed;background:var(--g90);color:#fff;padding:8px 12px;border-radius:4px;font-size:12px;font-weight:500;pointer-events:none;z-index:9999;display:none;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+#tt .tc{color:var(--v3);font-weight:600}
+
+/* SIDE PANEL */
+#sp{position:fixed;top:0;right:0;width:42%;min-width:320px;max-width:560px;height:100vh;background:#fff;box-shadow:var(--shp);z-index:800;transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;overflow:hidden}
+#sp.open{transform:translateX(0)}
+#sp-hdr{display:flex;justify-content:space-between;align-items:flex-start;padding:24px 24px 16px;border-bottom:1px solid var(--g15);flex-shrink:0;gap:12px}
+#sp-title{font-size:18px;font-weight:700;color:var(--g);line-height:1.3}
+#sp-sub{font-size:12px;color:var(--g40);margin-top:3px}
+#sp-close{background:none;border:none;cursor:pointer;color:var(--g40);font-size:22px;line-height:1;padding:2px 4px;flex-shrink:0;transition:color .15s}
+#sp-close:hover{color:var(--g)}
+#sp-body{overflow-y:auto;flex:1;padding:16px 24px 32px}
+
+/* LAB CARDS */
+.lcard{border:1px solid var(--g15);border-radius:var(--r);padding:14px 16px;margin-bottom:10px}
+.lcard:hover{border-color:var(--ac)}
+.ln{font-size:14px;font-weight:600;color:var(--g);margin-bottom:2px}
+.lc{font-size:12px;color:var(--g40);margin-bottom:6px}
+.lf{font-size:12.5px;color:var(--g70);line-height:1.45;margin-bottom:8px}
+.lch{font-size:11.5px;color:var(--g70);font-family:var(--fm)}
+.lm{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.badge{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:20px;letter-spacing:.04em}
+.bfH{background:#d4f5e2;color:#1a7a44}.bfM{background:#fff3cd;color:#856404}.bfL{background:#f8d7da;color:#842029}
+.bunv{background:#fff3cd;color:#856404;border:1px solid #ffd700}
+.bcat{background:var(--g07);color:var(--g70)}
+
+/* MOBILE DETAIL */
+#mob-det{display:none;margin-top:24px;padding:24px;background:var(--core-bg);border:1px solid var(--g15);border-radius:var(--r)}
+
+/* OVERLAY */
+#ov{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:799;display:none;cursor:pointer}
+#ov.vis{display:block}
+
+/* CEE TABLE */
+#cee{background:var(--core-bg)}
+.twrap{overflow-x:auto;border-radius:var(--r);box-shadow:var(--sh)}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:13.5px}
+thead th{background:var(--g90);color:#fff;padding:11px 14px;text-align:left;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;cursor:pointer;user-select:none}
+thead th:hover{background:var(--g70)}
+thead th.asc::after{content:" ↑"}thead th.desc::after{content:" ↓"}
+tbody tr{border-bottom:1px solid var(--g07);transition:background .1s}
+tbody tr:hover{background:var(--g04)}
+tbody td{padding:10px 14px;vertical-align:top}
+.tdn{font-weight:600}.tdf{color:var(--g70);max-width:280px;line-height:1.35}.tdch{font-family:var(--fm);font-size:11px;color:var(--g70);max-width:220px;line-height:1.4}
+
+/* BEYOND CEE */
+.grl{list-style:none;margin-bottom:48px}
+.gri{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--g07)}
+.grn{font-size:22px;font-weight:700;color:var(--g15);min-width:32px;text-align:right;font-variant-numeric:tabular-nums}
+.gflag{font-size:24px;min-width:32px;text-align:center}
+.gname{font-weight:600;font-size:15px;min-width:140px}
+.gtc{font-size:13px;color:var(--ac);font-weight:600;min-width:110px}
+.grat{font-size:13.5px;color:var(--g70);line-height:1.45}
+
+/* RELOC */
+.relgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-bottom:48px}
+.relcard{background:#fff;border:1px solid var(--g15);border-top:3px solid var(--ac);border-radius:var(--r);padding:16px 18px}
+.rcn{font-weight:600;font-size:13.5px;margin-bottom:4px}
+.rcr{font-size:14px;font-weight:700;color:var(--ac);margin-bottom:6px}
+.rcnote{font-size:12px;color:var(--g70);line-height:1.45}
+
+/* ACCORDION */
+.accwrap{border:1px solid var(--g15);border-radius:var(--r);overflow:hidden}
+.acci{border-bottom:1px solid var(--g15)}.acci:last-child{border-bottom:none}
+.acct{width:100%;text-align:left;background:#fff;border:none;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:var(--ff);font-size:14px;font-weight:600;color:var(--g);transition:background .15s}
+.acct:hover{background:var(--g04)}
+.acct .aflag{margin-right:10px;font-size:18px}
+.aarr{transition:transform .2s;font-size:12px;color:var(--g40)}
+.acci.open .aarr{transform:rotate(180deg)}
+.accb{display:none;padding:16px 20px 20px;background:var(--g04);font-size:13.5px;color:var(--g70);line-height:1.6;border-top:1px solid var(--g15)}
+.acci.open .accb{display:block}
+
+/* ADJACENT */
+.adjgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.adjcard{background:#fff;border:1px solid var(--g15);border-radius:var(--r);padding:22px 24px;position:relative;overflow:hidden}
+.adjcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--v5),var(--ac))}
+.adjt{font-size:15px;font-weight:700;margin-bottom:8px}
+.adjr{font-size:13.5px;color:var(--g70);margin-bottom:12px;line-height:1.5}
+.adjch{font-size:12px;font-family:var(--fm);color:var(--g40);background:var(--g07);padding:8px 12px;border-radius:4px;word-break:break-all}
+
+/* JOURNEY */
+.pstrip{display:flex;border:1px solid var(--g15);border-radius:var(--r);overflow:hidden;margin-bottom:32px}
+.pbtn{flex:1;padding:16px 12px;background:#fff;border:none;cursor:pointer;font-family:var(--ff);font-size:13px;font-weight:600;color:var(--g70);text-align:center;border-right:1px solid var(--g15);transition:background .15s,color .15s}
+.pbtn:last-child{border-right:none}
+.pbtn.act{background:var(--ac);color:#fff}
+.psn{display:block;font-size:11px;font-weight:400;opacity:.7;margin-bottom:3px}
+.pcontent{background:var(--g04);border:1px solid var(--g15);border-radius:var(--r);padding:24px;margin-bottom:40px;min-height:80px}
+.ppane{display:none}.ppane.act{display:block}
+.ppane h4{font-size:15px;font-weight:700;margin-bottom:10px}
+.ppane p{font-size:14px;color:var(--g70);line-height:1.6}
+.ppane ul{list-style:none;margin-top:10px}
+.ppane ul li{font-size:13.5px;color:var(--g70);padding:4px 0 4px 18px;position:relative;line-height:1.5}
+.ppane ul li::before{content:'→';position:absolute;left:0;color:var(--ac)}
+
+/* ARCHETYPES */
+.atabs{display:flex;border-bottom:2px solid var(--g15);overflow-x:auto}
+.atab{padding:10px 16px;font-size:12.5px;font-weight:600;color:var(--g70);border:none;background:none;cursor:pointer;font-family:var(--ff);white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-2px;transition:color .15s,border-color .15s}
+.atab.act{color:var(--ac);border-bottom-color:var(--ac)}
+.acontent{border:1px solid var(--g15);border-top:none;border-radius:0 0 var(--r) var(--r);padding:24px;margin-bottom:40px}
+.apane{display:none}.apane.act{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.actitle{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ac);margin-bottom:10px}
+.acol ul{list-style:none}
+.acol ul li{font-size:13px;color:var(--g70);padding:5px 0 5px 14px;position:relative;border-bottom:1px solid var(--g07);line-height:1.45}
+.acol ul li::before{content:'·';position:absolute;left:0;color:var(--ac);font-weight:700}
+.atactic{grid-column:1/-1;background:var(--g90);color:#fff;border-radius:var(--r);padding:14px 18px;font-size:13.5px;line-height:1.55;font-style:italic}
+.atactic strong{color:var(--v3);font-style:normal}
+
+/* LEVERS */
+.lgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.lcard2{background:var(--g);color:#fff;border-radius:var(--r);padding:20px}
+.lnum{font-size:28px;font-weight:700;color:var(--v3);line-height:1;margin-bottom:10px}
+.ltitle{font-size:13.5px;font-weight:700;margin-bottom:8px}
+.ldet{font-size:12px;color:rgba(255,255,255,.65);line-height:1.5}
+
+/* CHANNELS */
+.cgroup{margin-bottom:40px}
+.cgtitle{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g40);padding-bottom:8px;border-bottom:1px solid var(--g15);margin-bottom:16px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.ccard{border:1px solid var(--g15);border-radius:var(--r);padding:16px 18px;background:#fff}
+.ccn{font-size:14px;font-weight:600;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.cyield{font-size:10px;font-weight:600;padding:2px 7px;border-radius:20px;background:#d4f5e2;color:#1a7a44}
+.cyield.med{background:#fff3cd;color:#856404}
+.cpurp{font-size:13px;color:var(--g70);margin-bottom:8px;line-height:1.4}
+.cmeta{font-size:12px;color:var(--g40)}
+.clink{font-size:11.5px;font-family:var(--fm);color:var(--ac);word-break:break-all}
+.boolwrap{position:relative;margin-top:8px}
+.boolblk{background:var(--g90);color:#e8f4f8;font-family:var(--fm);font-size:12px;padding:16px 20px 16px 16px;border-radius:var(--r);white-space:pre-wrap;line-height:1.6;border:1px solid var(--g70)}
+.copybtn{position:absolute;top:10px;right:10px;background:var(--ac);color:#fff;border:none;border-radius:4px;padding:5px 12px;font-size:11px;font-weight:600;cursor:pointer;font-family:var(--ff);transition:background .15s}
+.copybtn:hover{background:var(--acd)}
+
+/* TIMELINE */
+.tl{display:grid;grid-template-columns:repeat(3,1fr);position:relative}
+.tl::before{content:'';position:absolute;top:36px;left:calc(100%/6);right:calc(100%/6);height:2px;background:linear-gradient(90deg,var(--v5),var(--ac),var(--v3));z-index:0}
+.tli{padding:0 20px;position:relative;z-index:1}
+.tldot{width:28px;height:28px;border-radius:50%;background:var(--ac);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;border:3px solid #fff;box-shadow:0 0 0 2px var(--ac)}
+.tlph{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);text-align:center;margin-bottom:6px}
+.tltitle{font-size:15px;font-weight:700;text-align:center;margin-bottom:12px}
+.tlacts{list-style:none}
+.tlacts li{font-size:13px;color:var(--g70);padding:5px 0 5px 16px;position:relative;border-bottom:1px solid var(--g07);line-height:1.45}
+.tlacts li::before{content:'→';position:absolute;left:0;color:var(--ac);font-size:11px;top:6px}
+.tlout{margin-top:12px;font-size:12.5px;color:var(--g40);font-style:italic;padding-top:10px;border-top:1px dashed var(--g15)}
+
+/* ASSUMPTIONS */
+.alist{max-width:860px}
+.aitem{padding:18px 0;border-bottom:1px solid var(--g07);display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:flex-start}
+.anum{font-size:12px;font-weight:700;color:var(--g15);padding-top:2px;font-variant-numeric:tabular-nums}
+.aclaim{font-size:14px;font-weight:500;color:var(--g);margin-bottom:4px;line-height:1.45}
+.asource{font-size:12.5px;color:var(--g70);font-family:var(--fm)}
+
+/* FOOTER */
+footer{background:var(--g);padding:48px 0}
+.fi{max-width:1180px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px}
+.fn{font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}
+.fc{font-size:13px;color:rgba(255,255,255,.5);line-height:1.8}
+.fc a{color:rgba(255,255,255,.7)}
+.fnote{font-size:12px;color:rgba(255,255,255,.35);max-width:360px;line-height:1.6}
+.fdate{font-size:12px;color:rgba(255,255,255,.35)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  #sp{display:none!important}
+  #mob-det{display:block}
+  .adjgrid{grid-template-columns:1fr}
+  .lgrid{grid-template-columns:1fr 1fr}
+  .tl{grid-template-columns:1fr;gap:32px}
+  .tl::before{display:none}
+  .tldot{margin:0 0 16px}
+  .apane.act{grid-template-columns:1fr}
+  .pstrip{flex-direction:column}
+  .pbtn{border-right:none;border-bottom:1px solid var(--g15)}
+  .h-stats{gap:24px}
+}
+@media(max-width:600px){
+  section{padding:48px 0}
+  .lgrid{grid-template-columns:1fr}
+  .relgrid{grid-template-columns:1fr}
+  .h-title{font-size:26px}
+  .cgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav id="snav" aria-label="Page navigation">
+  <div class="nav-i">
+    <a href="#hero">Overview</a>
+    <a href="#role">The Role</a>
+    <a href="#map-section">Talent Map</a>
+    <a href="#cee">CEE Core</a>
+    <a href="#beyond">Beyond CEE</a>
+    <a href="#adj">Adjacent Pools</a>
+    <a href="#journey">Journey</a>
+    <a href="#chan">Channels</a>
+    <a href="#plan">90-Day Plan</a>
+    <a href="#assump">Assumptions</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="wrap">
+    <div class="h-eye">Sourcing Intelligence Report &middot; futureproof</div>
+    <h1 class="h-title">Senior Firmware Engineer &mdash;<br><span>Tropic Square / TROPIC01.</span><br>A complete sourcing map.</h1>
+    <div class="h-stats">
+      <div><div class="h-sn">63</div><div class="h-sl">Named labs &amp; organisations</div></div>
+      <div><div class="h-sn">15</div><div class="h-sl">Countries mapped</div></div>
+      <div><div class="h-sn">19</div><div class="h-sl">Sourcing channels</div></div>
+      <div><div class="h-sn">5</div><div class="h-sl">Candidate archetypes</div></div>
+    </div>
+    <p class="h-desc">This report maps the global talent market for TROPIC01&rsquo;s first production firmware lead &mdash; <strong>CEE-prioritised, globally scoped.</strong> Every named target, sourcing vector, relocation lever, and closing tactic is grounded in primary research. No filler. No recycled job boards. Everything on this page is a concrete, actionable signal.</p>
+  </div>
+</section>
+
+<section id="role">
+  <div class="wrap">
+    <div class="slabel">01 &mdash; The Role</div>
+    <h2 class="stitle">The role as we understand it</h2>
+    <p class="ssub">Five dimensions from the job specification and company context. Nothing invented.</p>
+    <ul class="rbullets">
+      <li>
+        <span class="blabel">Technical Stack</span>
+        <span>Primary languages <strong>C and Python</strong> targeting <strong>ARM and RISC-V microarchitectures</strong>. Bare-metal programming, RTOS, secure boot, cryptographic hardware integration (ECC, HSM), custom compiler toolchains. Rust experience valued; Rust migration assessment is an explicit long-term mandate.</span>
+      </li>
+      <li>
+        <span class="blabel">Seniority &amp; Scope</span>
+        <span><strong>Senior individual contributor transitioning into team lead.</strong> Will lead a small, agile team of low-level developers. Defines deployment and testing environments. Architects secure firmware for production silicon &mdash; not validation or prototype work.</span>
+      </li>
+      <li>
+        <span class="blabel">Mission</span>
+        <span>TROPIC01 is the <strong>world&rsquo;s first open-source security chip</strong> &mdash; now shipping in the Trezor Safe 7. The incoming engineer defines production firmware from the ground up for silicon that has just entered global volume production. A founding contribution, not a maintenance role.</span>
+      </li>
+      <li>
+        <span class="blabel">Team &amp; Org</span>
+        <span>Small team of low-level developers within <strong>Tropic Square s.r.o., Prague</strong> &mdash; a fabless semiconductor company founded by the SatoshiLabs / Trezor team. Financial backing from SatoshiLabs (profitable since 2013). On-site Prague; hybrid working available.</span>
+      </li>
+      <li>
+        <span class="blabel">Rust Mandate</span>
+        <span>Assess and drive the migration of key firmware components to <strong>Rust</strong> for future product lines. The engineer <em>owns this decision</em> &mdash; timeline, architecture, and rationale are theirs to define. This is not a Rust job; it is a &ldquo;should we go Rust and how&rdquo; mandate.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="map-section">
+  <div class="wrap">
+    <div class="slabel">02 &mdash; Global Talent Map</div>
+    <h2 class="stitle">Where the candidates sit</h2>
+    <p class="ssub">Coloured by number of identified labs and organisations per country. Click any highlighted country to see the named target list.</p>
+    <div class="map-wrap">
+      <div id="svg-con" aria-label="Interactive world map showing talent density per country"></div>
+      <div class="map-leg">
+        <span class="leg-lbl">Lab density:</span>
+        <span class="sw" style="background:#fde725"></span><span class="lt">1&ndash;2</span>
+        <span class="sw" style="background:#7ad151"></span><span class="lt">3&ndash;4</span>
+        <span class="sw" style="background:#22a884"></span><span class="lt">5&ndash;7</span>
+        <span class="sw" style="background:#2a788e"></span><span class="lt">8&ndash;12</span>
+        <span class="sw" style="background:#414487"></span><span class="lt">13+</span>
+        <span class="lsep"></span>
+        <span class="sw" style="background:#e8e8e8"></span><span class="lt">Not mapped</span>
+      </div>
+    </div>
+    <div id="mob-det">
+      <div id="mob-title" style="font-size:17px;font-weight:700;margin-bottom:4px;"></div>
+      <div id="mob-sub" style="font-size:12px;color:var(--g40);margin-bottom:16px;"></div>
+      <div id="mob-body"></div>
+    </div>
+  </div>
+</section>
+
+<div id="ov" aria-hidden="true"></div>
+<aside id="sp" role="complementary" aria-label="Country detail">
+  <div id="sp-hdr">
+    <div>
+      <div id="sp-title">Czech Republic</div>
+      <div id="sp-sub"></div>
+    </div>
+    <button id="sp-close" aria-label="Close panel">&times;</button>
+  </div>
+  <div id="sp-body"></div>
+</aside>
+<div id="tt" role="tooltip"></div>
+
+<section id="cee">
+  <div class="wrap">
+    <div class="slabel">03 &mdash; CEE Core</div>
+    <h2 class="stitle">The CEE priority pool &mdash; named targets</h2>
+    <p class="ssub">Czech Republic, Slovakia, and Poland. Dense, sortable. Click column headers to sort. This is where the first wave of outreach begins.</p>
+    <div class="twrap">
+      <table id="cee-tbl">
+        <thead><tr>
+          <th data-col="country">Country</th>
+          <th data-col="name">Organisation</th>
+          <th data-col="city">City</th>
+          <th data-col="focus">Focus</th>
+          <th data-col="fit">Fit</th>
+          <th data-col="findability">Findability</th>
+          <th data-col="channel">Channel</th>
+        </tr></thead>
+        <tbody id="cee-body"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="beyond">
+  <div class="wrap">
+    <div class="slabel">04 &mdash; Beyond CEE</div>
+    <h2 class="stitle">Expansion geographies &mdash; relocation playbook</h2>
+    <p class="ssub">Non-CEE origin geographies ranked by talent density &times; realistic Prague conversion rate, plus what a competitive 2026 relocation package looks like.</p>
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:20px">Geographies ranked by talent density &times; Prague conversion</h3>
+    <ul class="grl" id="geo-list"></ul>
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:20px">Competitive Prague relocation package &mdash; 2026 benchmark</h3>
+    <div class="relgrid" id="reloc-grid"></div>
+    <p id="reloc-note" style="font-size:13px;color:var(--g70);margin-bottom:48px;font-style:italic"></p>
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:16px">Per-geography pitch framing</h3>
+    <div class="accwrap" id="geo-acc"></div>
+  </div>
+</section>
+
+<section id="adj">
+  <div class="wrap">
+    <div class="slabel">05 &mdash; Adjacent Pools</div>
+    <h2 class="stitle">The pools the obvious search misses</h2>
+    <p class="ssub">Cross-cutting talent pools not anchored to a single country. These are the &ldquo;we thought about this&rdquo; signals that separate systematic sourcing from keyword searches.</p>
+    <div class="adjgrid" id="adj-grid"></div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="wrap">
+    <div class="slabel">06 &mdash; Candidate Journey</div>
+    <h2 class="stitle">Knock to close &mdash; the full pipeline</h2>
+    <p class="ssub">Four phases, five archetypes, four TROPIC01-specific closing levers. Everything calibrated to the actual candidate population.</p>
+    <div class="pstrip" role="tablist">
+      <button class="pbtn act" data-ph="0" role="tab" aria-selected="true"><span class="psn">Phase 1</span>First Touch</button>
+      <button class="pbtn" data-ph="1" role="tab" aria-selected="false"><span class="psn">Phase 2</span>Socratic Qualification</button>
+      <button class="pbtn" data-ph="2" role="tab" aria-selected="false"><span class="psn">Phase 3</span>Operational Integration</button>
+      <button class="pbtn" data-ph="3" role="tab" aria-selected="false"><span class="psn">Phase 4</span>Close</button>
+    </div>
+    <div class="pcontent">
+      <div class="ppane act" data-ph="0">
+        <h4>High-tech mission alignment &mdash; not a cold call</h4>
+        <p>The initial message reads as an invitation to collaborate on an open-source movement, not a recruitment pitch. Lead with TROPIC01&rsquo;s transparent architecture, the Trezor Safe 7 deployment, and SatoshiLabs financial credibility. Reference the candidate&rsquo;s specific open-source contribution or paper in the first two sentences.</p>
+        <ul>
+          <li>Subject: &ldquo;Defining production-level firmware for TROPIC01 / SatoshiLabs&rdquo;</li>
+          <li>Contrast closed-source NDA environments with TROPIC01&rsquo;s fully auditable, public-RTL silicon</li>
+          <li>Position the role as defining production firmware from scratch &mdash; not inheriting a legacy stack</li>
+          <li>Close with a peer-to-peer framing: &ldquo;informal discussion with the engineering lead in Prague&rdquo;</li>
+        </ul>
+      </div>
+      <div class="ppane" data-ph="1">
+        <h4>Socratic qualification &mdash; led by technical peers, not HR</h4>
+        <p>Elite engineers are highly sensitive to automated filtering and LeetCode-style tests. The screening process must be led by technical peers using Socratic questions that evaluate structural and architectural decision-making.</p>
+        <ul>
+          <li><em>&ldquo;How would you design a robust firmware build and test environment for an open-source secure element from scratch?&rdquo;</em></li>
+          <li><em>&ldquo;When designing driver code for cryptographic engines like ECC, what firmware-level defences do you implement against side-channel power analysis?&rdquo;</em></li>
+          <li><em>&ldquo;In your experience with RISC-V or ARM, what are the primary trade-offs when evaluating RTOS versus bare-metal for a security-critical system?&rdquo;</em></li>
+          <li><em>&ldquo;How do you guide a specialised team to maintain engineering standards while fostering the creative freedom needed for open-source R&amp;D?&rdquo;</em></li>
+        </ul>
+      </div>
+      <div class="ppane" data-ph="2">
+        <h4>Operational integration &mdash; remove structural blockers early</h4>
+        <p>Before advancing to offer, pre-qualify three vectors in parallel to avoid late-stage collapse on non-technical grounds.</p>
+        <ul>
+          <li>Hybrid work arrangement and Prague practicalities confirmed &mdash; not an afterthought</li>
+          <li>Relocation pathway initiated for non-CEE candidates: EU Blue Card (CZK 73,823/month threshold from May 2026) or Czech Employee Card; full case management, 30&ndash;60 day processing target</li>
+          <li>Compensation framing: Prague market rate (&euro;55&ndash;80k) + cost-of-living reset + equity + sign-on; purchasing power parity comparison shared proactively</li>
+          <li>Partner employment: Prague English-language tech market is strong &mdash; addressed proactively, not reactively</li>
+        </ul>
+      </div>
+      <div class="ppane" data-ph="3">
+        <h4>Close &mdash; archetype-specific, not generic</h4>
+        <p>Each archetype has a distinct closing tactic detailed below. Universal TROPIC01 levers: equity in a company with proven commercial traction; name on the founding firmware team; conference speaking budget; R&amp;D autonomy on the Rust migration decision. Pre-built counters for the six most common rejection patterns are in the research report.</p>
+        <ul>
+          <li>Counter &ldquo;startup risk&rdquo;: TROPIC01 is in volume production in Trezor Safe 7 &mdash; the question is not whether this chip exists, it is whether they want to define its firmware</li>
+          <li>Counter &ldquo;salary delta&rdquo;: total package including equity and sign-on; cost-of-living comparison; purchasing power parity</li>
+          <li>Counter &ldquo;visa complexity&rdquo;: full immigration case managed end-to-end; 30&ndash;60 day timeline; bridging arrangement available if needed</li>
+          <li>Counter &ldquo;waiting for FAANG offer&rdquo;: &ldquo;FAANG offers a larger team. Tropic Square offers your name on the only open-source production secure element in the world. Only one of those exists.&rdquo;</li>
+        </ul>
+      </div>
+    </div>
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:0">Candidate archetypes</h3>
+    <div class="atabs" role="tablist" id="arch-tabs"></div>
+    <div class="acontent" id="arch-content"></div>
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:16px;margin-top:8px">TROPIC01-specific closing levers</h3>
+    <div class="lgrid" id="lev-grid"></div>
+  </div>
+</section>
+
+<section id="chan">
+  <div class="wrap">
+    <div class="slabel">07 &mdash; Sourcing Channels</div>
+    <h2 class="stitle">Channels we will actually use</h2>
+    <p class="ssub">Grouped by type. Every Boolean query is copy-paste-able. Every GitHub URL links out directly. Yield rated high / medium per channel.</p>
+    <div id="chan-con"></div>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="wrap">
+    <div class="slabel">08 &mdash; Activation Plan</div>
+    <h2 class="stitle">90-day activation plan</h2>
+    <p class="ssub">Three priority moves. Move 1 builds the longlist before spending any LinkedIn Recruiter budget. Move 2 activates CEE in parallel. Move 3 converts longlist to offer-ready candidates.</p>
+    <div class="tl" id="tl-con"></div>
+  </div>
+</section>
+
+<section id="assump">
+  <div class="wrap">
+    <div class="slabel">09 &mdash; Flagged Assumptions</div>
+    <h2 class="stitle">Assumptions we flagged</h2>
+    <p class="ssub">Every unverified claim in this report is listed below with a recommended verification path. This section exists as a trust signal &mdash; nothing here is presented as confirmed fact unless it is confirmed.</p>
+    <div class="alist" id="a-list"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="fi">
+    <div>
+      <div class="fn">Roman Csutkai</div>
+      <div class="fc">
+        futureproof s.r.o.<br>
+        <!-- ⚠ DELIVERY NOTE: add your direct phone number before sharing -->
+        <a href="mailto:roman@fproof.eu">roman@fproof.eu</a><br>
+        <a href="https://fproof.eu" target="_blank" rel="noopener">fproof.eu</a>
+      </div>
+    </div>
+    <div>
+      <div class="fdate">Prepared: May 2026</div>
+      <p class="fnote" style="margin-top:8px">Confidential sourcing intelligence prepared exclusively for Tropic Square s.r.o. Not for distribution. All facts are sourced from named publications, GitHub repositories, conference records, and company career pages cited in the extended research report.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const DATA = {
+  "countries": {
+    "CZ": {
+      "name": "Czech Republic",
+      "iso2": "CZ",
+      "tier": "core",
+      "labs": [
+        {
+          "name": "Codasip",
+          "city": "Brno",
+          "parent": "Codasip s.r.o.",
+          "focus": "RISC-V customised processor architectures, EDA tools",
+          "size": "L",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn Recruiter; RISC-V Summit Europe speaker list",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "Espressif Systems R&D",
+          "city": "Prague",
+          "parent": "Espressif Systems Co. Ltd.",
+          "focus": "Wireless IoT SoCs, open-source RISC-V hardware (ESP32-C3/C6/P4)",
+          "size": "L",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn \"Espressif\" + \"Prague\" filter; github.com/espressif/esp-idf contributors",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "ASICentrum",
+          "city": "Prague",
+          "parent": "ASICentrum s.r.o.",
+          "focus": "Ultra-low power integrated circuits, ASIC design",
+          "size": "M",
+          "fit": "M",
+          "findability": "M",
+          "channel": "LinkedIn; ensun.io semiconductor Czechia list",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "onsemi Design Centers",
+          "city": "Brno / Rožnov pod Radhoštěm",
+          "parent": "onsemi (ON Semiconductor)",
+          "focus": "Power management, automotive mixed-signal designs; €1.8B expansion underway",
+          "size": "L",
+          "fit": "M",
+          "findability": "H",
+          "channel": "LinkedIn \"onsemi\" + \"Brno\" + \"firmware\"",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "NXP Semiconductors Brno",
+          "city": "Brno",
+          "parent": "NXP Semiconductors N.V.",
+          "focus": "Automotive microcontrollers, ARM Cortex-M secure boot",
+          "size": "L",
+          "fit": "M",
+          "findability": "H",
+          "channel": "LinkedIn \"NXP\" + \"Brno\" + \"firmware\" filter",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "MICRORISC",
+          "city": "Jičín",
+          "parent": "MICRORISC s.r.o.",
+          "focus": "Microcontrollers, RF transceivers, electronic modules",
+          "size": "S",
+          "fit": "M",
+          "findability": "M",
+          "channel": "LinkedIn; ensun.io semiconductor Czechia list",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "Embedded Security Lab — CTU Prague",
+          "city": "Prague",
+          "parent": "Czech Technical University (ČVUT FIT)",
+          "focus": "Side-channel analysis, cryptographic hardware, fault injection, FPGA prototyping",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "crypto.fit.cvut.cz staff page; CHES/DSD author lists; direct intro via Dr. Martin Novotný",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "QtRVSim Project Team — CTU Prague",
+          "city": "Prague",
+          "parent": "Czech Technical University (ČVUT FIT)",
+          "focus": "RISC-V pipeline simulation, cache, ELF compilers — led by Jakub Dupák",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "github.com/cvut/qtrvsim contributors; Jakub Dupák direct outreach",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "MacGyver / SH Bastlíři (Silicon Hill)",
+          "city": "Prague",
+          "parent": "Silicon Hill (ČVUT student club)",
+          "focus": "Open hardware workshops, Virtuální bastlírna meetup series",
+          "size": "S",
+          "fit": "M",
+          "findability": "M",
+          "channel": "siliconhill.cz; Virtuální bastlírna sessions; post TROPIC01 teardown challenge",
+          "category": "makerspace",
+          "unverified": false
+        },
+        {
+          "name": "brmlab Hackerspace",
+          "city": "Prague",
+          "parent": "Independent",
+          "focus": "Reverse engineering, hardware hacking, robotics, quantum mechanics experiments",
+          "size": "S",
+          "fit": "M",
+          "findability": "M",
+          "channel": "brmlab.cz mailing list; present on open secure hardware at events",
+          "category": "makerspace",
+          "unverified": false
+        },
+        {
+          "name": "PrusaLab Makerspace",
+          "city": "Prague",
+          "parent": "Prusa Research",
+          "focus": "Hardware prototyping accelerator, firmware hobbyists",
+          "size": "S",
+          "fit": "M",
+          "findability": "M",
+          "channel": "Sponsor meetups; target custom hardware controller engineers",
+          "category": "makerspace",
+          "unverified": false
+        },
+        {
+          "name": "Bastl Instruments",
+          "city": "Brno",
+          "parent": "Independent",
+          "focus": "Custom hardware synthesizers, DIY kits, bare-metal DSP firmware",
+          "size": "S",
+          "fit": "M",
+          "findability": "M",
+          "channel": "bastl-instruments.com; direct outreach to developer team",
+          "category": "makerspace",
+          "unverified": false
+        },
+        {
+          "name": "Honeywell Aerospace Brno",
+          "city": "Brno",
+          "parent": "Honeywell International",
+          "focus": "Avionics RTOS firmware, DO-178C certification, ARM/PowerPC, VxWorks/INTEGRITY (~1,500 embedded engineers)",
+          "size": "L",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn \"Honeywell Aerospace\" + \"Brno\" + \"firmware\"; target 5-8yr tenure engineers",
+          "category": "aerospace",
+          "unverified": false
+        },
+        {
+          "name": "GE Aviation Czech",
+          "city": "Prague",
+          "parent": "GE Aerospace",
+          "focus": "Engine control firmware, embedded C",
+          "size": "M",
+          "fit": "M",
+          "findability": "M",
+          "channel": "LinkedIn \"GE Aviation\" + \"Prague\" + \"embedded\"",
+          "category": "aerospace",
+          "unverified": false
+        },
+        {
+          "name": "S.ICZ a.s.",
+          "city": "Prague",
+          "parent": "ICZ Group",
+          "focus": "Defense IT, cryptographic communications, HSM integration",
+          "size": "M",
+          "fit": "H",
+          "findability": "M",
+          "channel": "LinkedIn \"S.ICZ\" + \"HSM\" / \"cryptographic\"",
+          "category": "defense",
+          "unverified": false
+        },
+        {
+          "name": "Thales DIS (ex-Gemalto) CZ",
+          "city": "Prague / Plzeň area",
+          "parent": "Thales Group",
+          "focus": "Java Card OS, CC-certified secure elements",
+          "size": "M",
+          "fit": "H",
+          "findability": "M",
+          "channel": "LinkedIn \"Thales DIS\" + \"Praha\"",
+          "category": "smartcard",
+          "unverified": true
+        }
+      ],
+      "labCount": 16
+    },
+    "SK": {
+      "name": "Slovakia",
+      "iso2": "SK",
+      "tier": "core",
+      "labs": [
+        {
+          "name": "ESET",
+          "city": "Bratislava",
+          "parent": "ESET spol. s r.o.",
+          "focus": "Elite security engineers: threat analysis, low-level reverse engineering, secure C++/Python",
+          "size": "L",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn \"ESET\" + \"reverse engineering\" / \"firmware analysis\" filter",
+          "category": "security",
+          "unverified": false
+        },
+        {
+          "name": "GlobalLogic Slovakia",
+          "city": "Bratislava / Košice",
+          "parent": "GlobalLogic (Hitachi)",
+          "focus": "Embedded software for automotive systems and medical devices (IEC 62304); 1,200+ engineers",
+          "size": "L",
+          "fit": "M",
+          "findability": "H",
+          "channel": "LinkedIn \"GlobalLogic\" + \"Bratislava\" / \"Košice\" + \"embedded\"",
+          "category": "embedded-services",
+          "unverified": false
+        },
+        {
+          "name": "Inovasense",
+          "city": "Bratislava",
+          "parent": "Inovasense s.r.o.",
+          "focus": "Secure IoT, hardware-enforced security architectures, applied cryptography",
+          "size": "S",
+          "fit": "H",
+          "findability": "M",
+          "channel": "LinkedIn; ensun.io embedded systems Slovakia list",
+          "category": "security",
+          "unverified": false
+        },
+        {
+          "name": "Kistler Bratislava",
+          "city": "Bratislava",
+          "parent": "Kistler Group",
+          "focus": "Low-level Linux and Yocto environments",
+          "size": "M",
+          "fit": "M",
+          "findability": "M",
+          "channel": "LinkedIn; Profesia.sk",
+          "category": "embedded-services",
+          "unverified": false
+        },
+        {
+          "name": "Prosoft",
+          "city": "Žilina",
+          "parent": "Prosoft s.r.o.",
+          "focus": "Secure embedded systems, Java Card, HSM, PKI, TLS",
+          "size": "S",
+          "fit": "H",
+          "findability": "M",
+          "channel": "LinkedIn; ensun.io embedded systems Slovakia list",
+          "category": "security",
+          "unverified": false
+        },
+        {
+          "name": "Jaguar Land Rover Bratislava",
+          "city": "Bratislava",
+          "parent": "Tata Motors / JLR",
+          "focus": "EV battery management and infotainment firmware",
+          "size": "M",
+          "fit": "M",
+          "findability": "M",
+          "channel": "LinkedIn \"JLR\" / \"Jaguar\" + \"Bratislava\" + \"firmware\"",
+          "category": "automotive",
+          "unverified": false
+        },
+        {
+          "name": "Embedded Systems Lab — STU Bratislava",
+          "city": "Bratislava",
+          "parent": "Slovak University of Technology",
+          "focus": "RISC processors, FPGA co-processors, real-time systems — led by Assoc. Prof. Tibor Krajčovič",
+          "size": "S",
+          "fit": "H",
+          "findability": "M",
+          "channel": "STU staff page; stuba.sk Embedded Systems Laboratory",
+          "category": "academic",
+          "unverified": false
+        }
+      ],
+      "labCount": 7
+    },
+    "PL": {
+      "name": "Poland",
+      "iso2": "PL",
+      "tier": "core",
+      "labs": [
+        {
+          "name": "Sii Poland — Embedded Division",
+          "city": "Warsaw / Gdańsk",
+          "parent": "Sii Sp. z o.o.",
+          "focus": "Custom kernel drivers, OpenBMC, RTOS-integrated firmware for semiconductor manufacturers",
+          "size": "L",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn \"Sii\" + \"embedded\" + \"firmware\" + Poland filter",
+          "category": "embedded-services",
+          "unverified": false
+        },
+        {
+          "name": "ChipCraft",
+          "city": "Warsaw",
+          "parent": "ChipCraft Sp. z o.o.",
+          "focus": "Custom ASIC/SoC design, GNSS positioning chips, telehealth wearable microcontrollers",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn; SiNANO Institute profile; direct outreach",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "Institute of Microelectronics (IMiO) — WUT Warsaw",
+          "city": "Warsaw",
+          "parent": "Warsaw University of Technology",
+          "focus": "VLSI architectures, custom ASIC design, microelectronics — led by Profs. Szmidt, Mroczyński, Pleskacz",
+          "size": "M",
+          "fit": "H",
+          "findability": "H",
+          "channel": "imio.pw.edu.pl staff page; IEEE Xplore affiliation search; LinkedIn",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "Embedded Systems Lab — Gdynia Maritime University",
+          "city": "Gdynia",
+          "parent": "Gdynia Maritime University",
+          "focus": "Intel FPGA design, STM32 ARM programming, industrial automation",
+          "size": "S",
+          "fit": "M",
+          "findability": "M",
+          "channel": "umg.edu.pl Embedded Systems Lab; LinkedIn academic filter",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "PIT-RADWAR",
+          "city": "Warsaw",
+          "parent": "PGZ (Polish Armaments Group)",
+          "focus": "Military radar electronics, secure firmware",
+          "size": "M",
+          "fit": "M",
+          "findability": "M",
+          "channel": "LinkedIn \"PIT-RADWAR\" + \"firmware\" / \"embedded\"",
+          "category": "defense",
+          "unverified": false
+        },
+        {
+          "name": "Valeo Poland",
+          "city": "Warsaw / Kraków",
+          "parent": "Valeo SA",
+          "focus": "ADAS, secure communication firmware",
+          "size": "L",
+          "fit": "M",
+          "findability": "M",
+          "channel": "LinkedIn \"Valeo\" + \"Poland\" + \"embedded\"",
+          "category": "automotive",
+          "unverified": false
+        }
+      ],
+      "labCount": 6
+    },
+    "DE": {
+      "name": "Germany",
+      "iso2": "DE",
+      "tier": "expansion",
+      "labs": [
+        {
+          "name": "Infineon Technologies — Chip Card & Security",
+          "city": "Munich / Dresden",
+          "parent": "Infineon AG",
+          "focus": "Secure element firmware, SLE-series microcontrollers, CC-certified products",
+          "size": "L",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn; target \"SLE\" / \"SOLID FLASH\" / \"CC EAL\" keywords; CHES author list",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "NXP Semiconductors — S32 / LPC / i.MX Security",
+          "city": "Hamburg",
+          "parent": "NXP Semiconductors N.V.",
+          "focus": "ARM Cortex-M secure boot, TrustZone, automotive HSM",
+          "size": "L",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn; CHES author list; NXP GitHub repos",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "Fraunhofer AISEC",
+          "city": "Munich",
+          "parent": "Fraunhofer-Gesellschaft",
+          "focus": "Hardware security, trusted computing, IoT firmware analysis (~120 researchers)",
+          "size": "M",
+          "fit": "H",
+          "findability": "H",
+          "channel": "AISEC publications; staff page; USENIX/NDSS author lists",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "TU München — Security in Informatics",
+          "city": "Munich",
+          "parent": "TU Munich",
+          "focus": "Trusted hardware, TPM, secure boot, RISC-V (~30 active PhD)",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "TUM publications; CHES proceedings; LinkedIn \"PhD student\" filter",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "TU Darmstadt — CASED / CROSSING",
+          "city": "Darmstadt",
+          "parent": "TU Darmstadt",
+          "focus": "Cryptographic engineering, PUF, side-channel (~60 researchers)",
+          "size": "M",
+          "fit": "H",
+          "findability": "H",
+          "channel": "CASED website; CHES author list; LinkedIn",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "Ruhr-Uni Bochum — HGI (Güneysu group)",
+          "city": "Bochum",
+          "parent": "Ruhr-Universität Bochum",
+          "focus": "Hardware security, post-quantum FPGA crypto, CRYSTALS-Kyber hardware (~40 researchers)",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "ResearchGate; Google Scholar Güneysu co-author graph; CHES/TCHES journal",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "G+D Mobile Security (OpenTitan member)",
+          "city": "Munich",
+          "parent": "Giesecke+Devrient",
+          "focus": "Secure element firmware, Java Card, CC-certified silicon; OpenTitan coalition member",
+          "size": "L",
+          "fit": "H",
+          "findability": "M",
+          "channel": "LinkedIn; OpenTitan contributor list (github.com/lowRISC/opentitan)",
+          "category": "smartcard",
+          "unverified": false
+        }
+      ],
+      "labCount": 7
+    },
+    "AT": {
+      "name": "Austria",
+      "iso2": "AT",
+      "tier": "expansion",
+      "labs": [
+        {
+          "name": "TU Graz — IAIK (Stefan Mangard group)",
+          "city": "Graz",
+          "parent": "TU Graz",
+          "focus": "Side-channel attacks, fault injection, microarchitectural security, post-quantum (Sujoy Sinha Roy — NIST Saber finalist). Meltdown/Spectre co-discoverers.",
+          "size": "M",
+          "fit": "H",
+          "findability": "H",
+          "channel": "IAIK staff page; CHES / USENIX paper list; Google Scholar co-author graph",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "TU Graz — Lamarr Security Research",
+          "city": "Graz",
+          "parent": "TU Graz + SGS",
+          "focus": "Applied hardware security, IoT firmware analysis (~25 researchers)",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "Lamarr website; IEEE Xplore affiliation search",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "Infineon Technologies Austria",
+          "city": "Villach",
+          "parent": "Infineon AG",
+          "focus": "Smart card ICs, SLE-family secure microcontrollers, EAL certification (4,000+ total site)",
+          "size": "L",
+          "fit": "H",
+          "findability": "M",
+          "channel": "LinkedIn; filter \"Villach\" + \"secure element\" + \"firmware\"",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "NXP Gratkorn",
+          "city": "Gratkorn",
+          "parent": "NXP Semiconductors N.V.",
+          "focus": "Historic smart-card and secure-element firmware; RISC-V migration projects",
+          "size": "M",
+          "fit": "H",
+          "findability": "M",
+          "channel": "LinkedIn; NXP Careers site; CARDIS/CASCADE proceedings",
+          "category": "semiconductor",
+          "unverified": true
+        }
+      ],
+      "labCount": 4
+    },
+    "NL": {
+      "name": "Netherlands",
+      "iso2": "NL",
+      "tier": "expansion",
+      "labs": [
+        {
+          "name": "NXP Semiconductors HQ",
+          "city": "Eindhoven",
+          "parent": "NXP Semiconductors N.V.",
+          "focus": "MCU firmware, secure boot, TrustZone, LPC/i.MX platforms (~800 NL-based firmware/security engineers)",
+          "size": "L",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn; NXP GitHub; CHES author list",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "Riscure / Keysight Security Solutions",
+          "city": "The Hague",
+          "parent": "Keysight Technologies",
+          "focus": "CC evaluation, side-channel tooling (Inspector), fault-injection platform (~80 engineers)",
+          "size": "M",
+          "fit": "H",
+          "findability": "H",
+          "channel": "Riscure alumni on LinkedIn; CHES workshop authors",
+          "category": "security",
+          "unverified": false
+        },
+        {
+          "name": "TNO — Embedded Systems Security",
+          "city": "The Hague",
+          "parent": "TNO (government research)",
+          "focus": "Hardware security analysis, IoT security (~30 researchers)",
+          "size": "S",
+          "fit": "M",
+          "findability": "M",
+          "channel": "TNO publications; EUROSMART conference",
+          "category": "academic",
+          "unverified": false
+        }
+      ],
+      "labCount": 3
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "iso2": "GB",
+      "tier": "expansion",
+      "labs": [
+        {
+          "name": "lowRISC C.I.C. (OpenTitan steward)",
+          "city": "Cambridge",
+          "parent": "lowRISC C.I.C. (not-for-profit)",
+          "focus": "Open-source secure-element silicon, RISC-V (Ibex core), OpenTitan firmware (~40 engineers)",
+          "size": "M",
+          "fit": "H",
+          "findability": "H",
+          "channel": "GitHub (lowRISC org); LinkedIn; lowRISC.org team page",
+          "category": "open-source",
+          "unverified": false
+        },
+        {
+          "name": "ARM Ltd. — CPU & Security Group",
+          "city": "Cambridge",
+          "parent": "SoftBank / Arm Holdings",
+          "focus": "TrustZone-M, PSA Certified, Cortex-M firmware platform (2,000+ engineers on-site)",
+          "size": "L",
+          "fit": "M",
+          "findability": "M",
+          "channel": "LinkedIn; filter \"TrustZone\" + \"ARM\" + \"Cambridge\"; PSA blog authors",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "University of Cambridge — Security Group",
+          "city": "Cambridge",
+          "parent": "University of Cambridge",
+          "focus": "Hardware security, tamper resistance, smart cards (Markus Kuhn legacy, ~20 researchers)",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "CL Security Group website; IEEE S&P / USENIX author list",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "zeroRISC (Cambridge spinout)",
+          "city": "Cambridge",
+          "parent": "zeroRISC Ltd.",
+          "focus": "Commercial OpenTitan spinout; full-stack open-source silicon firmware (~20 engineers)",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn \"zeroRISC\" filter; GitHub commit history",
+          "category": "open-source",
+          "unverified": true
+        }
+      ],
+      "labCount": 4
+    },
+    "CH": {
+      "name": "Switzerland",
+      "iso2": "CH",
+      "tier": "expansion",
+      "labs": [
+        {
+          "name": "Shift Crypto AG (BitBox02)",
+          "city": "Zurich",
+          "parent": "Independent",
+          "focus": "Open-source hardware wallet firmware (C, Rust), dual-chip architecture (ATECC608B + SAMD51) — TROPIC01 conceptual peer (~15 engineers)",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "GitHub (digitalbitbox/bitbox02-firmware); LinkedIn; BitBox blog authors",
+          "category": "competitor",
+          "unverified": false
+        },
+        {
+          "name": "ETH Zurich — Applied Security Group (IIS)",
+          "city": "Zurich",
+          "parent": "ETH Zurich",
+          "focus": "RISC-V (Ibex/zero-riscy origin lab), OpenTitan co-contributor, hardware crypto — Luca Benini group (~30 researchers)",
+          "size": "M",
+          "fit": "H",
+          "findability": "H",
+          "channel": "ETH iis.ee.ethz.ch; OpenTitan contributor list; CHES proceedings; pulp-platform/ibex contributors",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "Kudelski Group — Hardware Security",
+          "city": "Cheseaux-sur-Lausanne",
+          "parent": "Kudelski SA",
+          "focus": "Hardware RoT, secure boot, conditional access firmware (~200 security engineers)",
+          "size": "L",
+          "fit": "M",
+          "findability": "M",
+          "channel": "LinkedIn; \"Kudelski\" + \"firmware\" + \"secure boot\" filter",
+          "category": "security",
+          "unverified": false
+        }
+      ],
+      "labCount": 3
+    },
+    "FR": {
+      "name": "France",
+      "iso2": "FR",
+      "tier": "expansion",
+      "labs": [
+        {
+          "name": "Ledger SAS — Firmware Team",
+          "city": "Paris / Vierzon / Grenoble",
+          "parent": "Ledger SAS",
+          "focus": "Hardware wallet firmware (C, Rust migration underway), secure element integration, CC-certified products (80–120 firmware/security engineers)",
+          "size": "L",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn (filter \"Ledger\" + \"firmware\" / \"embedded\" + \"Paris\"); GitHub (LedgerHQ org); post-2023 layoff passive pool",
+          "category": "competitor",
+          "unverified": true
+        },
+        {
+          "name": "STMicroelectronics — Secure MCU Division",
+          "city": "Grenoble",
+          "parent": "STMicroelectronics",
+          "focus": "STM32 secure boot, STM32H5 TrustZone, STM32WL firmware (500+ firmware engineers on site)",
+          "size": "L",
+          "fit": "M",
+          "findability": "M",
+          "channel": "LinkedIn; STM32 community forums; Embedded World exhibitors",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "CEA-Leti",
+          "city": "Grenoble",
+          "parent": "CEA (French Atomic Energy Commission)",
+          "focus": "Hardware security research, silicon security, ECC hardware (~50 security researchers)",
+          "size": "M",
+          "fit": "H",
+          "findability": "H",
+          "channel": "CEA-Leti publications; CHES / IEEE papers",
+          "category": "academic",
+          "unverified": false
+        }
+      ],
+      "labCount": 3
+    },
+    "IL": {
+      "name": "Israel",
+      "iso2": "IL",
+      "tier": "expansion",
+      "labs": [
+        {
+          "name": "Technion — Cryptography and Cyber Group",
+          "city": "Haifa",
+          "parent": "Technion — Israel Institute of Technology",
+          "focus": "Hardware crypto, ECC hardware, side-channel (~25 researchers)",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "Technion publications; CHES / Crypto proceedings",
+          "category": "academic",
+          "unverified": false
+        },
+        {
+          "name": "Nuvoton Technology Israel",
+          "city": "Tel Aviv / Ra'anana",
+          "parent": "Nuvoton Technology Corp.",
+          "focus": "OpenTitan silicon partner (produced first OpenTitan chips), TPM firmware (~150 engineers)",
+          "size": "M",
+          "fit": "H",
+          "findability": "M",
+          "channel": "LinkedIn; OpenTitan contributor list; Nuvoton GitHub",
+          "category": "semiconductor",
+          "unverified": true
+        },
+        {
+          "name": "Winbond Electronics Israel",
+          "city": "Tel Aviv",
+          "parent": "Winbond Electronics Corp.",
+          "focus": "Flash storage security, hardware RoT, OpenTitan coalition member (~100 engineers)",
+          "size": "M",
+          "fit": "M",
+          "findability": "M",
+          "channel": "LinkedIn; OpenTitan contributor list",
+          "category": "semiconductor",
+          "unverified": true
+        }
+      ],
+      "labCount": 3
+    },
+    "NO": {
+      "name": "Norway",
+      "iso2": "NO",
+      "tier": "expansion",
+      "labs": [
+        {
+          "name": "Nordic Semiconductor",
+          "city": "Trondheim / Oslo",
+          "parent": "Nordic Semiconductor ASA",
+          "focus": "nRF MCU firmware, Zephyr RTOS core contributor, BLE/LTE-M security (1,000+ engineers)",
+          "size": "L",
+          "fit": "H",
+          "findability": "H",
+          "channel": "GitHub (NordicPlayground, zephyrproject-rtos contributors); LinkedIn",
+          "category": "semiconductor",
+          "unverified": false
+        }
+      ],
+      "labCount": 1
+    },
+    "SE": {
+      "name": "Sweden",
+      "iso2": "SE",
+      "tier": "expansion",
+      "labs": [
+        {
+          "name": "KTH Stockholm — Security Group",
+          "city": "Stockholm",
+          "parent": "KTH Royal Institute of Technology",
+          "focus": "Hardware security, secure systems, crypto engineering (~15 researchers)",
+          "size": "S",
+          "fit": "M",
+          "findability": "M",
+          "channel": "KTH staff pages; USENIX / IEEE S&P author list",
+          "category": "academic",
+          "unverified": false
+        }
+      ],
+      "labCount": 1
+    },
+    "US": {
+      "name": "United States",
+      "iso2": "US",
+      "tier": "expansion",
+      "labs": [
+        {
+          "name": "Google — OpenTitan Team",
+          "city": "Mountain View, CA",
+          "parent": "Alphabet Inc.",
+          "focus": "RISC-V secure element firmware, OpenTitan (Ibex-based RoT) (~30–50 engineers)",
+          "size": "M",
+          "fit": "H",
+          "findability": "H",
+          "channel": "OpenTitan GitHub contributor list; LinkedIn \"OpenTitan\" filter; target European-origin engineers only",
+          "category": "open-source",
+          "unverified": true
+        },
+        {
+          "name": "SiFive — Security & Platform Team",
+          "city": "San Mateo, CA",
+          "parent": "SiFive Inc.",
+          "focus": "RISC-V platform security, secure boot for custom cores (~200 engineers)",
+          "size": "L",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn; SiFive GitHub; RISC-V Summit talks; target EU-tied engineers",
+          "category": "semiconductor",
+          "unverified": false
+        },
+        {
+          "name": "Cryptography Research Inc. / Rambus",
+          "city": "San Jose, CA",
+          "parent": "Rambus Inc.",
+          "focus": "DPA countermeasures, secure-boot IP, hardware RoT licensing (~60 engineers)",
+          "size": "M",
+          "fit": "H",
+          "findability": "H",
+          "channel": "CRI publications; CHES proceedings; Kocher group alumni",
+          "category": "security",
+          "unverified": false
+        }
+      ],
+      "labCount": 3
+    },
+    "SG": {
+      "name": "Singapore",
+      "iso2": "SG",
+      "tier": "expansion",
+      "labs": [
+        {
+          "name": "A*STAR IME (Institute of Microelectronics)",
+          "city": "Singapore",
+          "parent": "Agency for Science, Technology and Research",
+          "focus": "Silicon security, embedded systems, semiconductor design (~200 researchers)",
+          "size": "L",
+          "fit": "M",
+          "findability": "M",
+          "channel": "IME publications; IEEE Xplore; LinkedIn; target diaspora engineers with EU ties",
+          "category": "academic",
+          "unverified": false
+        }
+      ],
+      "labCount": 1
+    },
+    "BE": {
+      "name": "Belgium",
+      "iso2": "BE",
+      "tier": "expansion",
+      "labs": [
+        {
+          "name": "NGRAVE",
+          "city": "Brussels",
+          "parent": "NGRAVE NV",
+          "focus": "Embedded Linux on custom SE, ZERO hardware wallet",
+          "size": "S",
+          "fit": "H",
+          "findability": "M",
+          "channel": "LinkedIn \"NGRAVE\" filter; Belgian embedded community",
+          "category": "competitor",
+          "unverified": false
+        }
+      ],
+      "labCount": 1
+    },
+    "_OPENTITAN": {
+      "name": "OpenTitan Contributors",
+      "iso2": "_OPENTITAN",
+      "tier": "adjacent",
+      "labs": [
+        {
+          "name": "OpenTitan Contributor Pool (global)",
+          "city": "Global (EU-timezone focus)",
+          "parent": "lowRISC / OpenTitan Coalition",
+          "focus": "Open-source secure element silicon, RISC-V (Ibex), cryptographic coprocessors — closest project to TROPIC01 in the world",
+          "size": "M",
+          "fit": "H",
+          "findability": "H",
+          "channel": "github.com/lowRISC/opentitan/graphs/contributors — top 50 by commit count; cross-match GitHub handles to LinkedIn; filter EU-timezone commits",
+          "category": "open-source",
+          "unverified": false
+        }
+      ],
+      "labCount": 1
+    },
+    "_TREZOR": {
+      "name": "Trezor / SatoshiLabs Alumni",
+      "iso2": "_TREZOR",
+      "tier": "adjacent",
+      "labs": [
+        {
+          "name": "SatoshiLabs / Trezor Firmware Alumni",
+          "city": "Prague / Remote",
+          "parent": "SatoshiLabs s.r.o.",
+          "focus": "Highest-fit single pool globally — knows TROPIC01 context, open-source philosophy, and org culture. No onboarding required.",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "LinkedIn \"Past: SatoshiLabs / Trezor\" + firmware/embedded filter; GitHub trezor/trezor-firmware + trezor/trezor-crypto contributors",
+          "category": "competitor",
+          "unverified": false
+        }
+      ],
+      "labCount": 1
+    },
+    "_RUST_EMBEDDED": {
+      "name": "Rust-Embedded Working Group",
+      "iso2": "_RUST_EMBEDDED",
+      "tier": "adjacent",
+      "labs": [
+        {
+          "name": "Rust-Embedded WG Core Contributors (EU-timezone)",
+          "city": "Europe-distributed",
+          "parent": "rust-lang.org / Independent",
+          "focus": "Foundational Rust libraries for bare-metal: embedded-hal, cortex-m, defmt, flip-link, esp-hal. Directly relevant to Tropic Square's Rust migration mandate.",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "github.com/rust-embedded/embedded-hal contributors; github.com/knurling-rs contributors; filter EU timezone by commit timestamp",
+          "category": "open-source",
+          "unverified": false
+        }
+      ],
+      "labCount": 1
+    },
+    "_ZEPHYR": {
+      "name": "Zephyr RTOS Contributors",
+      "iso2": "_ZEPHYR",
+      "tier": "adjacent",
+      "labs": [
+        {
+          "name": "Zephyr RTOS Security/Crypto Subsystem Contributors",
+          "city": "Europe-distributed",
+          "parent": "Linux Foundation / zephyrproject-rtos",
+          "focus": "RTOS board bring-up, Bluetooth/crypto stack, security subsystem commits — engineers who work bare-metal at RTOS depth",
+          "size": "M",
+          "fit": "H",
+          "findability": "H",
+          "channel": "github.com/zephyrproject-rtos/zephyr — filter security/crypto subsystem commits; Zephyr Discord #security and #crypto channels",
+          "category": "open-source",
+          "unverified": false
+        }
+      ],
+      "labCount": 1
+    },
+    "_HARDWARE_WALLET_COMPETITORS": {
+      "name": "Hardware Wallet Firmware Engineers",
+      "iso2": "_HARDWARE_WALLET_COMPETITORS",
+      "tier": "adjacent",
+      "labs": [
+        {
+          "name": "Open-Source Hardware Wallet Firmware Contributors",
+          "city": "Global (primarily EU/NA)",
+          "parent": "Various (BitBox, Foundation Devices, Keystone, Coldcard)",
+          "focus": "Shipped secure-element-integrated hardware wallet firmware. Globally highest-fit pool outside OpenTitan. Repos: digitalbitbox/bitbox02-firmware, Foundation-Devices/passport2, KeystoneHQ/keystone-hardware",
+          "size": "S",
+          "fit": "H",
+          "findability": "H",
+          "channel": "GitHub contributor lists (2–3 hr manual task returns 15–30 individually named engineers globally); cross-match handles to LinkedIn",
+          "category": "competitor",
+          "unverified": false
+        }
+      ],
+      "labCount": 1
+    }
+  },
+  "archetypes": [
+    {
+      "id": "corporate-refugee",
+      "label": "Corporate Refugee",
+      "subtitle": "Senior engineer at Infineon, NXP, Bosch, Continental, Honeywell",
+      "motivations": [
+        "Direct ownership — 'I want to ship something I can point to'",
+        "Technical autonomy: freedom to define architecture and toolchain, not inherit a locked-down corporate stack",
+        "Recognition: name in release notes, conference presentations, open-source commits",
+        "Variety: no single-purpose 'HSM driver for AUTOSAR BSW' for five years"
+      ],
+      "dealBreakers": [
+        "Instability fears — counter: 'SatoshiLabs is the financial backbone; this is not a pre-product startup'",
+        "Prague relocation if deeply rooted (homeowner, children in school, partner in civil service) — screen early",
+        "Lack of career ladder — frame as technical leadership track, not management track"
+      ],
+      "closingLevers": [
+        "Equity: they receive none at Infineon — even modest ESOP has high psychological value",
+        "Title: 'Lead Firmware Engineer' or 'Principal Firmware Architect' is meaningful when coming from 'Senior Engineer II'",
+        "Conference budget: guaranteed speaking slot at CHES or Embedded World in year 2"
+      ],
+      "closingTactic": "The 'size of the pond' close. 'At Bosch, you are one of 3,000 firmware engineers. At Tropic Square, you define the production firmware stack for the world's only open-source secure element. That's your name in the silicon.'"
+    },
+    {
+      "id": "academic-transitioner",
+      "label": "Academic Transitioner",
+      "subtitle": "PhD / postdoc at CTU Prague, TU Graz IAIK, Ruhr-Uni Bochum HGI",
+      "motivations": [
+        "Impact: academic papers take 2 years from idea to citation — firmware ships in months",
+        "The 'real hardware' problem: TROPIC01 is a production chip with real adversaries, not an FPGA demo",
+        "Continued publication path: Tropic Square has incentive to publish for open-source credibility",
+        "Reasonable work hours vs. grant-deadline crunch"
+      ],
+      "dealBreakers": [
+        "Loss of intellectual freedom — role must be framed as research-level engineering, not 'coding to spec'",
+        "Downgrade of peer group — introduce to engineering team early; quality of conversation sells the role",
+        "Insufficient comp — postdoc salary (€35–45k) is often below Prague market rate (€55–75k); this is frequently a raise"
+      ],
+      "closingLevers": [
+        "Conference budget and publication support — non-negotiable for this archetype",
+        "CHES/COSADE speaking opportunity within 18 months",
+        "Flexible working arrangement to complete a paper under submission",
+        "Title: 'Firmware Security Researcher' or 'Applied Security Engineer' resonates better than 'Engineer'"
+      ],
+      "closingTactic": "The 'lab-to-silicon' close. 'You've been studying secure elements from the outside, via attacks. Now you get to build one from the inside.' For TU Graz candidates: 'You're joining the same OpenTitan ecosystem you've been researching.'"
+    },
+    {
+      "id": "open-source-ideologue",
+      "label": "Open-Source Ideologue",
+      "subtitle": "Zephyr maintainer, Rust-embedded contributor, OpenTitan / Trezor community member",
+      "motivations": [
+        "The open-source credentials of TROPIC01 are the primary sell — RTL, firmware, and threat model are all public",
+        "Mission over money, up to a point: will accept a modest comp delta for ideological alignment",
+        "No IP surprises: assurance that contributions remain attributable and corporate IP arrangements don't capture prior open-source work",
+        "Community connection: FOSDEM, Rust-embedded, DEF CON HHV — these are work activities, not side projects"
+      ],
+      "dealBreakers": [
+        "Any whiff of closed-source mandate or NDA covering the firmware architecture — communicate boundaries clearly and early",
+        "Equity structures that feel extractive or complex — keep it simple",
+        "Micromanagement or 'Jira hell' — this archetype functions best with outcome-based management"
+      ],
+      "closingLevers": [
+        "Explicit written commitment to continue open-source contributions as part of the role",
+        "Named credit in firmware releases and CHANGELOG",
+        "Conference travel budget (FOSDEM, DEF CON HHV, Embedded Open Source Summit)"
+      ],
+      "closingTactic": "The 'you're already working on this' close. Mine their GitHub history; if they have contributed to any RISC-V, embedded crypto, or secure-boot project, reference it directly: 'I saw your contribution to cortex-m/NVIC handling — that's precisely what we're building on for TROPIC01.'"
+    },
+    {
+      "id": "defense-escapee",
+      "label": "Defense Engineer Seeking Freedom",
+      "subtitle": "Honeywell Aerospace Brno, GE Aviation Czech, S.ICZ, PIT-RADWAR",
+      "motivations": [
+        "Visible output: 'I want to ship something my family can hold in their hand'",
+        "Faster iteration: leave behind 18-month test-documentation cycles",
+        "Clearance-free: no more background checks, travel restrictions, or 'I can't tell you what I work on'",
+        "Technical peer status: defense engineers are often strong and underrecognized"
+      ],
+      "dealBreakers": [
+        "Perceived quality downgrade — counter: TROPIC01 is shipping in volume in a consumer product; quality bar is real",
+        "Loss of defined role structure — provide clarity on scope, reporting, and engineering standards",
+        "Comp: Honeywell Brno salaries (€45–70k) overlap Tropic Square's market — less friction than Corporate Refugee archetype"
+      ],
+      "closingLevers": [
+        "The 'no classification' freedom: they can talk about their work publicly, publish, and present at conferences",
+        "Engineering rigor: TROPIC01's design verification discipline is comparable to DO-178C in intentionality, different in bureaucracy",
+        "Prague local: Honeywell Aerospace Brno pool requires no relocation"
+      ],
+      "closingTactic": "The 'freedom to speak' close. 'For the first time in your career, you can tell your family, your conference audience, and your GitHub profile exactly what you build.' Powerful emotional lever for engineers who have spent years unable to discuss their work publicly."
+    },
+    {
+      "id": "trezor-alumni",
+      "label": "Ex-Trezor / SatoshiLabs Alumnus",
+      "subtitle": "Former SatoshiLabs or Trezor firmware engineer — highest-fit archetype by definition",
+      "motivations": [
+        "Opportunity to 'close the loop': they worked on the product that needed a better secure element — TROPIC01 is that element",
+        "Reunion with peers: if former colleagues are at Tropic Square, social bond is a significant motivator",
+        "Open-source identity: most SatoshiLabs alumni self-identify with the open-source Bitcoin culture"
+      ],
+      "dealBreakers": [
+        "Left Trezor/SatoshiLabs on bad terms — screen for this during informal coffee conversations before formal outreach",
+        "Over-qualification: very senior former SatoshiLabs engineers may have comp or equity expectations at co-founder level"
+      ],
+      "closingLevers": [
+        "Title: 'Founding Firmware Engineer' or 'Lead Firmware Architect' positions the role as legacy-defining",
+        "Equity: this archetype understands startup equity and knows how to evaluate it — don't undersell",
+        "Mission: no pitch required; they already believe in the product"
+      ],
+      "closingTactic": "Direct and personal. Skip the standard pitch. Reference specific shared context: the TROPIC01 design, the Trezor Safe 7 deployment, a mutual colleague. The conversation should begin as a peer discussion, not a recruitment call."
+    }
+  ],
+  "channels": [
+    {
+      "name": "LinkedIn Recruiter — Primary Boolean",
+      "type": "platform",
+      "purpose": "Boolean search for passive candidates — security-centric embedded engineers in CEE",
+      "yield": "high",
+      "link": "https://www.linkedin.com/talent/",
+      "queryString": "(\"firmware\" OR \"embedded\" OR \"bare-metal\" OR \"low-level\" OR \"BSP\" OR \"device driver\")\nAND (\"C\" OR \"C++\" OR \"Python\")\nAND (\"ARM\" OR \"RISC-V\" OR \"microcontroller\" OR \"ASIC\" OR \"SoC\")\nAND (\"secure boot\" OR \"cryptography\" OR \"crypto\" OR \"ECC\" OR \"HSM\" OR \"tamper\"\n     OR \"side-channel\" OR \"fault-injection\" OR \"open-source\")\nAND (Prague OR Brno OR Bratislava OR Kosice OR Zilina)"
+    },
+    {
+      "name": "LinkedIn Recruiter — Competitor Sourcing",
+      "type": "platform",
+      "purpose": "Target engineers at named companies in Poland and Slovakia",
+      "yield": "high",
+      "link": "https://www.linkedin.com/talent/",
+      "queryString": "(Title: \"firmware\" OR \"embedded\" OR \"software engineer\" OR \"team lead\")\nAND (\"Sii\" OR \"ChipCraft\" OR \"Codasip\" OR \"Espressif\" OR \"Kistler\"\n     OR \"GlobalLogic\" OR \"Inovasense\")\nAND (\"RTOS\" OR \"Yocto\" OR \"kernel\" OR \"C\" OR \"Rust\")\nAND (Poland OR Slovakia OR Czechia)"
+    },
+    {
+      "name": "GitHub — lowRISC/opentitan",
+      "type": "github",
+      "purpose": "Mine contributor list of the closest project to TROPIC01 globally. Single highest-value repository.",
+      "yield": "high",
+      "link": "https://github.com/lowRISC/opentitan/graphs/contributors"
+    },
+    {
+      "name": "GitHub — trezor/trezor-firmware",
+      "type": "github",
+      "purpose": "SatoshiLabs ecosystem alumni and contributor base — highest-fit single GitHub org",
+      "yield": "high",
+      "link": "https://github.com/trezor/trezor-firmware"
+    },
+    {
+      "name": "GitHub — rust-embedded/*",
+      "type": "github",
+      "purpose": "Authors of foundational Rust bare-metal libraries (embedded-hal, cortex-m, defmt). Directly relevant to Rust migration mandate.",
+      "yield": "high",
+      "link": "https://github.com/rust-embedded/embedded-hal"
+    },
+    {
+      "name": "GitHub — zephyrproject-rtos/zephyr",
+      "type": "github",
+      "purpose": "RTOS contributors with board bring-up, security subsystem, and crypto stack commits",
+      "yield": "high",
+      "link": "https://github.com/zephyrproject-rtos/zephyr"
+    },
+    {
+      "name": "GitHub — digitalbitbox/bitbox02-firmware",
+      "type": "github",
+      "purpose": "Direct hardware-wallet firmware competitor — C + Rust, ATECC608-based open-source stack",
+      "yield": "high",
+      "link": "https://github.com/digitalbitbox/bitbox02-firmware"
+    },
+    {
+      "name": "GitHub — cvut/qtrvsim",
+      "type": "github",
+      "purpose": "CTU-based RISC-V simulator project contributors — proven RISC-V architectural expertise",
+      "yield": "medium",
+      "link": "https://github.com/cvut/qtrvsim"
+    },
+    {
+      "name": "CHES 2026",
+      "type": "conference",
+      "purpose": "Premier global venue for side-channel attacks and secure silicon. Mine author/presenter lists for European affiliations.",
+      "yield": "high",
+      "link": "https://ches.iacr.org/2026/",
+      "date": "October 11–15, 2026",
+      "location": "Antalya, Turkey"
+    },
+    {
+      "name": "CASCADE 2026 (merged COSADE + CARDIS)",
+      "type": "conference",
+      "purpose": "Sole European venue for hardware physical attacks. Full author list = highest European per-capita concentration of side-channel engineers.",
+      "yield": "high",
+      "link": "https://cascade-conference.org",
+      "date": "March–April 2026",
+      "location": "Rotterdam, Netherlands"
+    },
+    {
+      "name": "RISC-V Summit Europe",
+      "type": "conference",
+      "purpose": "Mine speaker bios for firmware and security topics. RISC-V ecosystem practitioners.",
+      "yield": "medium",
+      "link": "https://riscv.org/events/",
+      "date": "2026 date TBC",
+      "location": "Europe (previous: Munich / Barcelona)"
+    },
+    {
+      "name": "Hardwear.io",
+      "type": "conference",
+      "purpose": "Trainer track indicates deepest hardware security expertise globally. Speaker list = curated practitioner population.",
+      "yield": "high",
+      "link": "https://hardwear.io",
+      "date": "2026 date TBC",
+      "location": "The Hague, Netherlands"
+    },
+    {
+      "name": "FOSDEM Embedded / Security / RISC-V Devrooms",
+      "type": "conference",
+      "purpose": "Free attendance = highest ratio of independent engineer to corporate employee. Past talks archive is fully mineable.",
+      "yield": "medium",
+      "link": "https://fosdem.org",
+      "date": "February 2027 (annual)",
+      "location": "Brussels, Belgium"
+    },
+    {
+      "name": "PESW — Prague Embedded Systems Workshop",
+      "type": "conference",
+      "purpose": "Local CEE venue focused on dependable and low-power designs, embedded security, fault-tolerant computing.",
+      "yield": "medium",
+      "link": "https://pesw.fit.cvut.cz",
+      "date": "Annual (CTU-hosted)",
+      "location": "Prague, Czech Republic"
+    },
+    {
+      "name": "Rust-Embedded Matrix/Element",
+      "type": "community",
+      "purpose": "Identify active code contributors — not lurkers. Target those answering technical questions with code snippets; cross-reference GitHub handles.",
+      "yield": "medium",
+      "link": "https://matrix.to/#/#embedded:matrix.org"
+    },
+    {
+      "name": "Zephyr Discord — #security and #crypto channels",
+      "type": "community",
+      "purpose": "Engineers posting patch links in security/crypto channels are the active practitioners, not spectators.",
+      "yield": "medium",
+      "link": "https://zephyrproject.org/community/"
+    },
+    {
+      "name": "brmlab Hackerspace mailing list",
+      "type": "community",
+      "purpose": "Prague-based hardware hackers; present TROPIC01 teardown challenge to surface passionate embedded engineers.",
+      "yield": "medium",
+      "link": "https://brmlab.cz"
+    },
+    {
+      "name": "IACR ePrint Archive",
+      "type": "publication",
+      "purpose": "Advanced search: 'secure element' OR 'root of trust' OR 'side-channel' OR 'fault injection' + year filter 2022–2026. Export European-affiliated author pairs.",
+      "yield": "high",
+      "link": "https://eprint.iacr.org"
+    },
+    {
+      "name": "TCHES — Transactions on Cryptographic Hardware and Embedded Systems",
+      "type": "publication",
+      "purpose": "IACR open-access journal; full author/affiliation metadata downloadable. Mine systematically by European affiliation strings.",
+      "yield": "high",
+      "link": "https://tches.iacr.org"
+    }
+  ],
+  "relocationPackage": {
+    "note": "Total first-year relocation cost to employer: €15,000–€30,000 above standard compensation. Benchmark against the cost of an extended 6–12 month vacancy.",
+    "components": [
+      {
+        "name": "Relocation lump-sum",
+        "range": "€6,000–€12,000",
+        "notes": "Paid on start date or split: 50% on start, 50% at 6-month mark. Covers shipping, travel, deposits."
+      },
+      {
+        "name": "Temporary housing",
+        "range": "1–3 months company-arranged or €1,500–€2,500/month stipend",
+        "notes": "Prague rental market is tight. Company-arranged serviced apartment removes friction and signals seriousness."
+      },
+      {
+        "name": "Immigration support",
+        "range": "Full case management via relocation specialist (€800–€1,500/case)",
+        "notes": "Required for non-EU candidates: EU Blue Card (CZK 73,823/month threshold from May 1, 2026) or Czech Employee Card. Processing: 30–60 days (2026 digital reform target)."
+      },
+      {
+        "name": "Spouse / partner job assistance",
+        "range": "Introductions, CV review, network connections",
+        "notes": "High deal-breaker risk if partner cannot find employment. Prague has a strong English-language tech job market — solvable problem."
+      },
+      {
+        "name": "Schooling support",
+        "range": "International school introductions (fees €8,000–€14,000/year)",
+        "notes": "Relevant if candidate has children. English-language international schools exist in Prague."
+      },
+      {
+        "name": "Sign-on bonus",
+        "range": "€3,000–€8,000",
+        "notes": "Bridges the candidate's notice period and financial uncertainty during relocation."
+      },
+      {
+        "name": "Base salary",
+        "range": "€55,000–€80,000/year gross (Prague market)",
+        "notes": "Non-CEE relocators typically expect 10–20% premium above local market rate as a relocation adjustment."
+      },
+      {
+        "name": "Equity (ESOP / phantom stock)",
+        "range": "4-year vest / 1-year cliff",
+        "notes": "For a company at TROPIC01's commercial traction stage, meaningful asymmetric upside if Tropic Square scales to broader IoT and security markets."
+      },
+      {
+        "name": "Retention bonus",
+        "range": "€3,000–€5,000 at 18-month mark",
+        "notes": "Reduces early attrition. Particularly effective for relocation hires."
+      }
+    ]
+  },
+  "ninetyDayPlan": [
+    {
+      "move": 1,
+      "phase": "Days 1–30",
+      "title": "Mine the Open-Source Silicon Commons",
+      "objective": "Build a named, individually verified longlist of 50–80 engineers from the highest-composite pools using publicly available data before committing any LinkedIn Recruiter budget.",
+      "actions": [
+        "Pull contributor lists from: lowRISC/opentitan, trezor/trezor-firmware, digitalbitbox/bitbox02-firmware, Foundation-Devices/passport2, zephyrproject-rtos/zephyr (security/crypto commits only), rust-embedded/embedded-hal",
+        "For each contributor: identify current employer via LinkedIn or GitHub profile; filter for European timezone by commit timestamps; flag any at Top-20 shortlist institutions",
+        "Pull CHES 2023–2025 proceedings author lists (freely available at tches.iacr.org); filter for European affiliations; cross-reference with LinkedIn",
+        "Mine IAIK TU Graz staff page and co-author graph from Stefan Mangard's Google Scholar profile — every junior co-author is a warm sourcing lead",
+        "Produce 50–80 person longlist: name/pseudonym, institution, GitHub handle, LinkedIn URL, fit rationale, timezone, estimated seniority"
+      ],
+      "expectedOutcome": "50–80 named, individually verified candidate leads with fit rationale — built before spending LinkedIn Recruiter budget"
+    },
+    {
+      "move": 2,
+      "phase": "Days 15–60",
+      "title": "Activate the CEE Near-Ring in Parallel",
+      "objective": "Run faster, lower-friction local (CZ/SK) sourcing simultaneously, targeting 5–8 qualified Czech/Slovak conversations within 30 days.",
+      "actions": [
+        "Run primary LinkedIn Boolean string from Q5 against Prague, Brno, Bratislava, and Košice",
+        "Target specifically: CTU FIT Embedded Security Lab (personal outreach to Martin Novotný's team), Espressif Prague, Codasip Brno departures in last 12 months, ASICentrum Prague",
+        "Post TROPIC01 'Tear-Down Challenge' to brmlab mailing list and Silicon Hill / bastlíři channels — attracts top-tier passionate engineers",
+        "Approach Jakub Dupák (QtRVSim lead at CTU) directly — known, named, findable profile with extreme RISC-V alignment",
+        "Check Honeywell Aerospace Brno LinkedIn pool for engineers with 5–8 years tenure (prime departure risk window)"
+      ],
+      "expectedOutcome": "5–8 qualified Czech/Slovak conversations in progress; TROPIC01 brand established in Prague hacker/academic community"
+    },
+    {
+      "move": 3,
+      "phase": "Days 45–90",
+      "title": "Convert Longlist to Shortlist via Socratic Qualification",
+      "objective": "Move 15–20 of the 50–80 longlist contacts through the three-stage qualification pipeline, targeting 3–5 offer-ready candidates by Day 90.",
+      "actions": [
+        "Send mission alignment first touch to top 30 longlist contacts — customize first two sentences per profile, reference their specific open-source contribution or paper. No template-only messages.",
+        "For responders: conduct 30-min Socratic technical screen (architectural setup, security optimization, toolchain customization, leadership questions) with Tropic Square engineering lead present — non-negotiable",
+        "For relocation candidates: initiate relocation playbook in parallel with technical qualification; pre-qualify visa pathway before advancing to formal offer",
+        "Maintain living scoring sheet (Fit × Findability × Relocation willingness × Compensation alignment) for all active candidates; weekly calibration review with Tropic Square hiring team",
+        "By Day 90: present 3–5 person offer-ready shortlist with full profiles, compensation range, visa pathway, and relocation cost estimates"
+      ],
+      "expectedOutcome": "3–5 offer-ready candidates presented to Tropic Square; full profiles with compensation, visa, and relocation cost estimates"
+    }
+  ],
+  "assumptions": [
+    {
+      "claim": "Thales DIS (ex-Gemalto) has a current operational presence in Prague or Plzeň.",
+      "source": "Q9.2.5 — Verify: Thales Group Czech Republic website; LinkedIn \"Thales DIS\" + \"Praha\" / \"Plzeň\" filter"
+    },
+    {
+      "claim": "G+D Mobile Security has a Polish operational site.",
+      "source": "Q9.2.5 — Verify: G+D Careers page; LinkedIn company search"
+    },
+    {
+      "claim": "NXP Gratkorn (Austria) is currently active in RISC-V migration projects.",
+      "source": "Q9.1.2 — Verify: NXP Gratkorn site; NXP Austria LinkedIn; direct contact with NXP CZ/AT technical recruiting"
+    },
+    {
+      "claim": "Ledger employs 80–120 engineers in firmware/security roles specifically (vs. 700 total headcount).",
+      "source": "Q9.1.6 — Verify: Ledger Careers page job count; LinkedIn headcount filter by function"
+    },
+    {
+      "claim": "Google OpenTitan team size is approximately 30–50 engineers.",
+      "source": "Q9.1.9 — Verify: OpenTitan contributor list analysis; open-source conference speaker counts"
+    },
+    {
+      "claim": "zeroRISC (Cambridge) has approximately 20 engineers.",
+      "source": "Q9.1.4 — Verify: zeroRISC.com team page; LinkedIn company headcount"
+    },
+    {
+      "claim": "Western Digital has approximately 20 OpenTitan-contributing engineers.",
+      "source": "Q9.1.9 — Verify: OpenTitan GitHub contributor affiliation analysis"
+    },
+    {
+      "claim": "Nuvoton Technology Israel site employs approximately 150 engineers.",
+      "source": "Q9.1.8 — Verify: Nuvoton Israel LinkedIn; Nuvoton corporate reporting"
+    },
+    {
+      "claim": "Winbond Electronics Israel site employs approximately 100 engineers.",
+      "source": "Q9.1.8 — Verify: Winbond Israel LinkedIn; Winbond investor presentations"
+    },
+    {
+      "claim": "Tropic Square s.r.o. has an ESOP or phantom stock scheme available for this role.",
+      "source": "Q10.3 — Confirmation required from Tropic Square founding team before using equity as a closing lever"
+    },
+    {
+      "claim": "Czech Blue Card salary threshold is CZK 73,823 gross/month (1.5× national average) effective May 1, 2026. One immigration advisory source mentioned a reduced 1.2× threshold for IT roles — not confirmed in official CZ government publications.",
+      "source": "Background — Safe planning assumption: use the standard 1.5× threshold. Sources: visahq.com/news/2026-05-04/cz; movetoprague.com/czech-republic-blue-card-salary-requirements-2025-2026/"
+    },
+    {
+      "claim": "Honeywell Aerospace Brno employs approximately 1,500 embedded engineers.",
+      "source": "Q9.2.3 — Verify: Honeywell Aerospace Czech LinkedIn headcount; Honeywell Czech Republic press releases"
+    },
+    {
+      "claim": "trezor/trezor-firmware GitHub repository is fully public and contributor lists are accessible.",
+      "source": "Q9.2.1 — Verify: current visibility status at github.com/trezor/trezor-firmware"
+    },
+    {
+      "claim": "Ledger was running a Rust migration of BOLOS firmware at time of writing.",
+      "source": "Q9.2.6 — Verify: LedgerHQ GitHub; Ledger engineering blog"
+    },
+    {
+      "claim": "RISC-V Summit Europe 2026 date and location not yet confirmed.",
+      "source": "Q9.3.1 — Verify: riscv.org/events/ for confirmed 2026 European summit date"
+    },
+    {
+      "claim": "Hardwear.io 2026 date and location not yet confirmed.",
+      "source": "Q9.3.1 — Verify: hardwear.io official website for 2026 conference date"
+    },
+    {
+      "claim": "International schools in Prague charge €8,000–€14,000 annually.",
+      "source": "Q9.4.3 — Verify: Prague British School, Park Lane, International School of Prague fee schedules"
+    },
+    {
+      "claim": "Riscure has been rebranded as / merged into Keysight Security Solutions.",
+      "source": "Q9.1.3 — Verify: Keysight Technologies acquisition announcement; riscure.com redirect status"
+    }
+  ],
+  "closingLevers": [
+    {
+      "title": "Equity in Tropic Square s.r.o.",
+      "detail": "TROPIC01 is in volume production in Trezor Safe 7. Even a modest ESOP with 4-year vest / 1-year cliff represents meaningful asymmetric upside if Tropic Square scales to broader IoT and security chip markets. Communicate the cap table story honestly."
+    },
+    {
+      "title": "Name on the founding firmware team",
+      "detail": "TROPIC01 v1.0 production firmware has no lead author yet. The incoming Senior Firmware Engineer defines and ships that work. In 5 years, every pitch in this space will reference having built TROPIC01's production stack."
+    },
+    {
+      "title": "Conference speaking opportunities",
+      "detail": "Tropic Square has active incentive to present at CHES, RWC (Real World Cryptography), DEF CON Hardware Hacking Village, and Embedded World. The engineer who builds the firmware is the natural speaker. Career-defining publication and conference exposure."
+    },
+    {
+      "title": "R&D autonomy on Rust migration",
+      "detail": "The Rust decision is explicitly open. The incoming engineer owns it. For Open-Source Ideologue and Academic Transitioner archetypes, this is a rare opportunity to define the language direction for a production secure-element firmware stack — something referenced in the Rust-embedded community for years."
+    }
+  ]
+};
+
+Object.values(DATA.countries).forEach(c => { c.labCount = c.labs.length; });
+
+// ============================================================
+// WORLD MAP — D3-free SVG choropleth using simplified country
+// shapes drawn as SVG paths. Uses a Mercator-like projection.
+// ============================================================
+
+// Simplified world country paths (equirectangular projection, viewBox 0 0 1000 500)
+// Each country path uses its ISO-3166-1 alpha-2 code as id
+const WORLD_SVG = `<svg id="world-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;background:#d6e8f0">
+<!-- Ocean background -->
+<rect width="1000" height="500" fill="#d6e8f0"/>
+<!-- Countries — simplified outlines, approximate positions -->
+<!-- North America -->
+<path id="CA" d="M60,40 L200,35 L220,55 L210,80 L185,90 L155,95 L100,90 L65,70 Z"/>
+<path id="US" d="M65,100 L210,95 L225,115 L220,145 L195,155 L155,160 L80,155 L62,135 Z"/>
+<path id="MX" d="M80,160 L195,155 L205,175 L195,200 L170,210 L110,205 L78,185 Z"/>
+<!-- Central America / Caribbean (simplified) -->
+<path id="GT" d="M120,205 L140,203 L142,215 L122,217 Z"/>
+<path id="CU" d="M155,195 L180,192 L182,200 L156,202 Z"/>
+<!-- South America -->
+<path id="CO" d="M130,230 L165,225 L170,248 L155,258 L128,252 Z"/>
+<path id="VE" d="M155,222 L195,217 L198,232 L175,240 L153,235 Z"/>
+<path id="BR" d="M155,255 L250,245 L268,275 L260,320 L230,338 L185,340 L155,315 L140,285 Z"/>
+<path id="PE" d="M118,268 L148,260 L155,290 L145,318 L115,315 L105,290 Z"/>
+<path id="BO" d="M148,280 L170,275 L175,302 L150,308 L145,295 Z"/>
+<path id="CL" d="M118,318 L140,312 L145,345 L138,395 L112,390 L110,360 Z"/>
+<path id="AR" d="M138,318 L185,310 L192,350 L178,395 L148,400 L130,370 L130,338 Z"/>
+<path id="UY" d="M175,355 L195,350 L198,368 L175,372 Z"/>
+<path id="PY" d="M168,310 L192,306 L195,328 L170,332 Z"/>
+<path id="EC" d="M105,252 L130,246 L133,268 L107,272 Z"/>
+<path id="GY" d="M190,235 L210,230 L213,248 L190,252 Z"/>
+<!-- Europe -->
+<path id="IS" d="M355,62 L375,58 L378,72 L357,75 Z"/>
+<path id="NO" d="M448,60 L480,48 L490,65 L480,80 L455,85 L445,75 Z"/>
+<path id="SE" d="M468,72 L490,65 L495,88 L480,98 L465,92 Z"/>
+<path id="FI" d="M492,62 L515,52 L520,72 L505,85 L490,80 Z"/>
+<path id="DK" d="M453,90 L465,85 L468,97 L455,100 Z"/>
+<path id="GB" d="M418,88 L438,82 L442,100 L432,108 L415,103 Z"/>
+<path id="IE" d="M405,92 L418,88 L420,102 L406,105 Z"/>
+<path id="PT" d="M400,138 L412,135 L414,152 L400,155 Z"/>
+<path id="ES" d="M408,132 L445,127 L448,147 L432,155 L408,152 Z"/>
+<path id="FR" d="M423,105 L455,100 L460,122 L445,132 L420,128 Z"/>
+<path id="BE" d="M438,100 L452,97 L455,108 L440,112 Z"/>
+<path id="NL" d="M440,92 L454,88 L456,100 L441,103 Z"/>
+<path id="LU" d="M445,108 L452,106 L453,114 L445,115 Z"/>
+<path id="DE" d="M448,92 L478,87 L482,108 L468,118 L445,115 Z"/>
+<path id="CH" d="M445,115 L465,112 L467,124 L445,126 Z"/>
+<path id="AT" d="M462,112 L492,108 L495,120 L462,122 Z"/>
+<path id="IT" d="M452,122 L475,118 L482,138 L472,158 L455,152 L450,138 Z"/>
+<path id="SI" d="M468,118 L482,115 L484,124 L468,126 Z"/>
+<path id="HR" d="M470,122 L488,118 L492,134 L470,136 Z"/>
+<path id="PL" d="M462,88 L498,82 L502,100 L488,108 L460,106 Z"/>
+<path id="CZ" d="M462,100 L492,96 L495,108 L462,110 Z"/>
+<path id="SK" d="M488,102 L505,99 L508,110 L488,112 Z"/>
+<path id="HU" d="M472,112 L505,108 L508,120 L472,122 Z"/>
+<path id="RO" d="M490,110 L520,106 L524,124 L505,130 L488,126 Z"/>
+<path id="BG" d="M495,122 L522,118 L525,132 L495,135 Z"/>
+<path id="RS" d="M478,120 L498,116 L500,130 L478,133 Z"/>
+<path id="GR" d="M488,132 L515,128 L518,145 L498,150 L485,145 Z"/>
+<path id="AL" d="M475,128 L485,125 L487,138 L474,140 Z"/>
+<path id="MK" d="M485,126 L498,123 L500,133 L484,135 Z"/>
+<path id="BA" d="M470,120 L485,117 L487,128 L470,130 Z"/>
+<path id="ME" d="M476,126 L487,123 L488,130 L476,132 Z"/>
+<path id="UA" d="M495,95 L540,88 L545,108 L520,118 L492,113 Z"/>
+<path id="MD" d="M518,108 L530,105 L532,116 L518,118 Z"/>
+<path id="BY" d="M492,82 L528,76 L532,92 L495,97 Z"/>
+<path id="LT" d="M478,78 L498,74 L500,85 L478,88 Z"/>
+<path id="LV" d="M480,70 L505,65 L508,78 L480,82 Z"/>
+<path id="EE" d="M482,62 L505,58 L508,70 L482,74 Z"/>
+<!-- Russia -->
+<path id="RU" d="M502,28 L800,18 L820,60 L780,95 L680,105 L580,100 L520,90 L500,65 Z"/>
+<!-- Middle East / Caucasus -->
+<path id="TR" d="M498,130 L555,124 L560,142 L538,150 L495,147 Z"/>
+<path id="GE" d="M540,118 L560,115 L563,126 L540,128 Z"/>
+<path id="AM" d="M555,122 L568,119 L570,130 L555,132 Z"/>
+<path id="AZ" d="M560,118 L578,114 L580,128 L558,130 Z"/>
+<path id="SY" d="M530,140 L558,136 L560,152 L530,155 Z"/>
+<path id="LB" d="M528,148 L538,146 L539,155 L528,157 Z"/>
+<path id="IL" d="M522,148 L532,145 L534,160 L522,162 Z"/>
+<path id="JO" d="M532,152 L548,148 L550,165 L532,167 Z"/>
+<path id="IQ" d="M548,130 L578,126 L582,150 L558,158 L545,152 Z"/>
+<path id="IR" d="M560,128 L608,122 L615,150 L598,165 L560,160 Z"/>
+<path id="SA" d="M532,158 L590,152 L598,185 L575,200 L535,195 Z"/>
+<path id="YE" d="M548,192 L590,186 L592,205 L548,208 Z"/>
+<path id="AE" d="M578,172 L600,168 L602,182 L578,185 Z"/>
+<path id="OM" d="M590,170 L618,162 L622,188 L592,192 Z"/>
+<path id="KW" d="M568,155 L578,152 L580,162 L568,164 Z"/>
+<path id="QA" d="M578,168 L585,165 L586,175 L578,177 Z"/>
+<!-- Africa -->
+<path id="MA" d="M408,155 L435,150 L438,172 L408,175 Z"/>
+<path id="DZ" d="M422,158 L478,152 L482,190 L458,200 L420,195 Z"/>
+<path id="TN" d="M445,148 L460,145 L462,162 L444,165 Z"/>
+<path id="LY" d="M455,158 L505,152 L508,192 L455,196 Z"/>
+<path id="EG" d="M505,152 L540,148 L545,178 L505,182 Z"/>
+<path id="MR" d="M388,180 L425,175 L428,210 L388,215 Z"/>
+<path id="ML" d="M408,190 L455,184 L458,222 L408,228 Z"/>
+<path id="NE" d="M448,185 L498,180 L502,218 L448,222 Z"/>
+<path id="SD" d="M502,172 L548,167 L552,212 L502,218 Z"/>
+<path id="ET" d="M532,205 L572,200 L575,235 L532,240 Z"/>
+<path id="SO" d="M562,198 L590,192 L592,238 L562,242 Z"/>
+<path id="NG" d="M440,210 L480,205 L484,242 L440,248 Z"/>
+<path id="CM" d="M460,238 L488,232 L492,262 L460,268 Z"/>
+<path id="GH" d="M420,218 L445,214 L448,248 L420,252 Z"/>
+<path id="CI" d="M404,220 L428,216 L430,242 L404,246 Z"/>
+<path id="SN" d="M380,195 L408,190 L410,212 L380,216 Z"/>
+<path id="CD" d="M468,240 L525,234 L530,295 L468,302 Z"/>
+<path id="AO" d="M458,282 L498,278 L502,318 L458,322 Z"/>
+<path id="ZM" d="M492,295 L538,290 L542,325 L492,330 Z"/>
+<path id="TZ" d="M520,252 L558,248 L562,285 L520,290 Z"/>
+<path id="KE" d="M542,232 L575,227 L578,262 L542,268 Z"/>
+<path id="UG" d="M520,235 L548,230 L550,255 L520,260 Z"/>
+<path id="MZ" d="M512,288 L548,283 L552,335 L512,340 Z"/>
+<path id="ZW" d="M498,315 L528,310 L530,338 L498,342 Z"/>
+<path id="ZA" d="M465,330 L528,323 L532,368 L490,378 L462,365 Z"/>
+<path id="NA" d="M452,315 L488,310 L492,345 L452,350 Z"/>
+<path id="BW" d="M480,322 L512,317 L515,350 L480,355 Z"/>
+<path id="MG" d="M558,292 L578,287 L582,335 L558,340 Z"/>
+<!-- Central Asia -->
+<path id="KZ" d="M568,80 L660,72 L668,108 L620,118 L565,112 Z"/>
+<path id="UZ" d="M572,108 L615,103 L618,122 L572,127 Z"/>
+<path id="TM" d="M560,120 L600,115 L603,135 L560,140 Z"/>
+<path id="AF" d="M580,128 L628,122 L632,150 L605,160 L578,155 Z"/>
+<path id="PK" d="M598,140 L645,134 L650,168 L618,177 L595,170 Z"/>
+<!-- South Asia -->
+<path id="IN" d="M610,155 L668,148 L675,195 L648,228 L618,232 L600,210 L605,178 Z"/>
+<path id="LK" d="M638,222 L650,218 L652,235 L638,238 Z"/>
+<path id="BD" d="M655,168 L678,163 L680,182 L655,186 Z"/>
+<path id="NP" d="M638,148 L670,143 L672,158 L638,162 Z"/>
+<path id="BT" d="M658,148 L672,145 L674,155 L658,158 Z"/>
+<!-- Southeast Asia -->
+<path id="MM" d="M668,168 L695,162 L698,198 L668,204 Z"/>
+<path id="TH" d="M685,192 L710,187 L713,218 L688,225 Z"/>
+<path id="VN" d="M700,188 L722,183 L724,228 L700,232 Z"/>
+<path id="KH" d="M700,215 L722,210 L724,232 L700,235 Z"/>
+<path id="LA" d="M688,185 L710,180 L712,205 L688,210 Z"/>
+<path id="MY" d="M695,240 L740,235 L742,252 L695,256 Z"/>
+<path id="SG" d="M710,250 L720,248 L721,256 L710,257 Z"/>
+<path id="ID" d="M698,255 L785,248 L788,275 L760,282 L698,278 Z"/>
+<path id="PH" d="M735,215 L762,208 L765,248 L735,252 Z"/>
+<!-- East Asia -->
+<path id="CN" d="M660,90 L778,78 L788,135 L752,158 L700,165 L655,155 L645,128 Z"/>
+<path id="MN" d="M650,72 L765,60 L772,88 L752,98 L648,92 Z"/>
+<path id="KR" d="M762,130 L782,126 L784,148 L762,152 Z"/>
+<path id="KP" d="M758,110 L785,105 L788,128 L758,132 Z"/>
+<path id="JP" d="M780,105 L808,98 L812,128 L782,135 Z"/>
+<path id="TW" d="M762,158 L775,154 L777,168 L762,172 Z"/>
+<!-- Oceania -->
+<path id="AU" d="M720,295 L818,285 L825,355 L795,372 L720,365 L700,340 L705,312 Z"/>
+<path id="NZ" d="M832,348 L850,340 L855,368 L835,375 Z"/>
+<path id="PG" d="M772,268 L812,260 L815,292 L772,298 Z"/>
+</svg>`;
+
+function getViridis(n) {
+  if (n >= 13) return '#414487';
+  if (n >= 8)  return '#2a788e';
+  if (n >= 5)  return '#22a884';
+  if (n >= 3)  return '#7ad151';
+  if (n >= 1)  return '#fde725';
+  return '#e8e8e8';
+}
+
+function buildMap() {
+  const con = document.getElementById('svg-con');
+  con.innerHTML = WORLD_SVG;
+  const svg = con.querySelector('svg');
+
+  svg.querySelectorAll('path[id]').forEach(path => {
+    const iso = path.id.toUpperCase();
+    const cd = DATA.countries[iso];
+    if (cd) {
+      path.setAttribute('fill', getViridis(cd.labCount));
+      path.setAttribute('stroke', '#fff');
+      path.setAttribute('stroke-width', '0.7');
+      path.setAttribute('role', 'button');
+      path.setAttribute('tabindex', '0');
+      path.setAttribute('aria-label', cd.name + ', ' + cd.labCount + ' organisations');
+      path.style.cursor = 'pointer';
+      path.addEventListener('click', () => selectCountry(iso));
+      path.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') selectCountry(iso); });
+      path.addEventListener('mouseenter', e => showTT(e, cd));
+      path.addEventListener('mouseleave', hideTT);
+      path.addEventListener('mousemove', moveTT);
+    } else {
+      path.setAttribute('fill', '#e8e8e8');
+      path.setAttribute('stroke', '#fff');
+      path.setAttribute('stroke-width', '0.5');
+    }
+  });
+
+  // Pre-select CZ
+  selectCountry('CZ');
+}
+
+// Tooltip
+function showTT(e, cd) {
+  const tt = document.getElementById('tt');
+  tt.innerHTML = '<strong>' + cd.name + '</strong> &nbsp;<span class="tc">' + cd.labCount + ' orgs</span><br><small style="opacity:.7">Click for details</small>';
+  tt.style.display = 'block';
+  moveTT(e);
+}
+function moveTT(e) {
+  const tt = document.getElementById('tt');
+  tt.style.left = (e.clientX + 14) + 'px';
+  tt.style.top  = (e.clientY - 10) + 'px';
+}
+function hideTT() { document.getElementById('tt').style.display = 'none'; }
+
+// ===== COUNTRY SELECT =====
+function buildLabCards(labs) {
+  return labs.map(lab => {
+    const unv = lab.unverified ? '<span class="badge bunv" style="font-size:9.5px;">&#9888; unverified</span>' : '';
+    return '<div class="lcard">'
+      + '<div class="ln">' + lab.name + ' ' + unv + '</div>'
+      + '<div class="lc">' + lab.city + (lab.parent ? ' &middot; ' + lab.parent : '') + '</div>'
+      + '<div class="lf">' + lab.focus + '</div>'
+      + '<div class="lm">'
+      + '<span class="badge bf' + lab.fit + '">Fit: ' + lab.fit + '</span>'
+      + '<span class="badge bf' + lab.findability + '">Find: ' + lab.findability + '</span>'
+      + '<span class="badge bcat">' + lab.category + '</span>'
+      + '</div>'
+      + '<div class="lch" style="margin-top:8px">&rarr; ' + lab.channel + '</div>'
+      + '</div>';
+  }).join('');
+}
+
+let activeISO = null;
+function selectCountry(iso) {
+  const cd = DATA.countries[iso];
+  if (!cd) return;
+  activeISO = iso;
+  if (window.innerWidth >= 900) {
+    openPanel(iso, cd);
+  } else {
+    showMob(iso, cd);
+  }
+  // Highlight
+  const svg = document.querySelector('#svg-con svg');
+  if (svg) {
+    svg.querySelectorAll('path[id]').forEach(p => {
+      if (DATA.countries[p.id.toUpperCase()]) {
+        p.style.opacity = p.id.toUpperCase() === iso ? '1' : '0.6';
+        p.setAttribute('stroke-width', p.id.toUpperCase() === iso ? '2' : '0.7');
+      }
+    });
+  }
+}
+
+function openPanel(iso, cd) {
+  document.getElementById('sp-title').textContent = cd.name;
+  document.getElementById('sp-sub').textContent = cd.labCount + ' organisations · Tier: ' + cd.tier;
+  document.getElementById('sp-body').innerHTML = buildLabCards(cd.labs);
+  document.getElementById('sp').classList.add('open');
+  document.getElementById('ov').classList.add('vis');
+}
+function closePanel() {
+  document.getElementById('sp').classList.remove('open');
+  document.getElementById('ov').classList.remove('vis');
+  const svg = document.querySelector('#svg-con svg');
+  if (svg) svg.querySelectorAll('path[id]').forEach(p => { p.style.opacity='1'; p.setAttribute('stroke-width','0.7'); });
+}
+function showMob(iso, cd) {
+  document.getElementById('mob-title').textContent = cd.name;
+  document.getElementById('mob-sub').textContent = cd.labCount + ' organisations · Tier: ' + cd.tier;
+  document.getElementById('mob-body').innerHTML = buildLabCards(cd.labs);
+  const det = document.getElementById('mob-det');
+  det.style.display = 'block';
+  det.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+document.getElementById('sp-close').addEventListener('click', closePanel);
+document.getElementById('ov').addEventListener('click', closePanel);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
+
+// ===== CEE TABLE =====
+function buildCEE() {
+  const cee = Object.entries(DATA.countries).filter(([,c]) => c.tier === 'core');
+  const rows = [];
+  cee.forEach(([iso, country]) => {
+    country.labs.forEach(lab => rows.push({iso, country, lab}));
+  });
+  renderCEE(rows);
+  let sc = null, sd = 1;
+  document.querySelectorAll('#cee-tbl thead th').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = th.dataset.col;
+      if (sc === col) sd *= -1; else { sc = col; sd = 1; }
+      document.querySelectorAll('#cee-tbl thead th').forEach(t => t.classList.remove('asc','desc'));
+      th.classList.add(sd===1?'asc':'desc');
+      rows.sort((a,b) => {
+        let av, bv;
+        if (col==='country') { av=a.country.name; bv=b.country.name; }
+        else if (col==='name') { av=a.lab.name; bv=b.lab.name; }
+        else if (col==='city') { av=a.lab.city; bv=b.lab.city; }
+        else if (col==='fit') { av=a.lab.fit; bv=b.lab.fit; }
+        else if (col==='findability') { av=a.lab.findability; bv=b.lab.findability; }
+        else return 0;
+        return av<bv?-sd:av>bv?sd:0;
+      });
+      renderCEE(rows);
+    });
+  });
+}
+function renderCEE(rows) {
+  document.getElementById('cee-body').innerHTML = rows.map(r => {
+    const u = r.lab.unverified ? ' <span class="badge bunv" style="font-size:9px;">&#9888;</span>' : '';
+    return '<tr>'
+      + '<td><span style="font-size:11px;font-weight:600;color:var(--ac)">' + r.country.name + '</span></td>'
+      + '<td class="tdn">' + r.lab.name + u + '</td>'
+      + '<td>' + r.lab.city + '</td>'
+      + '<td class="tdf">' + r.lab.focus.substring(0,110) + (r.lab.focus.length>110?'&hellip;':'') + '</td>'
+      + '<td><span class="badge bf' + r.lab.fit + '">' + r.lab.fit + '</span></td>'
+      + '<td><span class="badge bf' + r.lab.findability + '">' + r.lab.findability + '</span></td>'
+      + '<td class="tdch">' + r.lab.channel.substring(0,75) + (r.lab.channel.length>75?'&hellip;':'') + '</td>'
+      + '</tr>';
+  }).join('');
+}
+
+// ===== BEYOND CEE =====
+const GEO_RANK = [
+  {iso:'DE',flag:'🇩🇪',rationale:"Highest talent density outside CEE. Munich–Prague is 45 min by air; ~40% cost-of-living differential largely neutralises the comp delta for lifestyle-oriented engineers. Infineon, NXP, Fraunhofer AISEC, TU München, RUB HGI."},
+  {iso:'AT',flag:'🇦🇹',rationale:"TU Graz IAIK is the single highest-concentration institution in Europe for hardware side-channel expertise (Meltdown/Spectre co-discoverers). Prague is 4 hr by train — same CEE cultural corridor. Relocation conversion is High."},
+  {iso:'CH',flag:'🇨🇭',rationale:"Shift Crypto (BitBox02) and ETH Zurich (Ibex/OpenTitan origin lab) are direct conceptual peers of Tropic Square. Smaller pool but highest mission-fit density in Europe outside CEE."},
+  {iso:'FR',flag:'🇫🇷',rationale:"Post-2023 Ledger layoff created a warm, directly qualified pool of hardware-wallet firmware engineers. Open-source culture pitch lands well. CEA-Leti and STMicro Grenoble are second tier."},
+  {iso:'NL',flag:'🇳🇱',rationale:"NXP HQ (world's 2nd-largest MCU vendor, ~800 NL-based firmware engineers) and Riscure/Keysight (the global CC evaluation tooling standard) in the same postal area. High English proficiency."},
+  {iso:'IL',flag:'🇮🇱',rationale:"Non-EU visa adds friction (Czech Employee Card, 30–60 days). Nuvoton produced the first commercial OpenTitan chips. Engineers with EU education history or dual nationality convert at higher rate."},
+  {iso:'GB',flag:'🇬🇧',rationale:"lowRISC CIC (OpenTitan steward) and zeroRISC spinout are in Cambridge. Post-Brexit: Prague restores EU freedom-of-movement — genuine psychological lever for British engineers."},
+  {iso:'NO',flag:'🇳🇴',rationale:"Nordic Semiconductor is a Zephyr RTOS core contributor. Strong open-source culture alignment. High Oslo salaries reduce conversion; mission pitch is required."},
+  {iso:'US',flag:'🇺🇸',rationale:"Largest absolute concentration globally (Google OpenTitan, SiFive, Rambus CRI). Target only candidates with EU ties or explicit relocation intent; salary delta is typically unbridgeable otherwise."},
+  {iso:'SG',flag:'🇸🇬',rationale:"A*STAR IME is internationally mobile. Singapore-based engineers are already globally mobile; EU-educated diaspora with European family connections is the primary conversion target."},
+];
+
+const GEO_PITCH = [
+  {flag:'🇩🇪',name:'Germany',pitch:"Lead with cost-of-living reset: Munich rent vs Prague rent is ~50% lower for comparable quality. Lead also with engineering autonomy — at Bosch or Continental, they are one of 3,000 firmware engineers. At Tropic Square, they define the stack. Emphasise EU freedom of movement (they stay in the EU). Don't lead with mission — Germans tend to be pragmatic; mission is a supporting point, not the hook."},
+  {flag:'🇦🇹',name:'Austria (TU Graz)',pitch:"Lead with the research-to-production pipeline: TROPIC01 is the product that IAIK research papers describe. The gap between side-channel academic research and shipping it in production silicon is the narrative. Prague is a known, comfortable relocation from Graz. TU Graz PhDs are often mobile — the 'first real industry job' pitch works well here."},
+  {flag:'🇨🇭',name:'Switzerland',pitch:"Lead with open-source culture. Shift Crypto / BitBox02 is a direct conceptual peer of TROPIC01. For a Shift Crypto engineer who believes in open hardware, TROPIC01 is an ideological step up in scale and impact. Acknowledge the comp delta honestly; compensate with mission and equity framing."},
+  {flag:'🇫🇷',name:'France (Ledger alumni)',pitch:"Lead with open-source culture. Ledger's BOLOS stack is partially open-source, but the secure element (CC-certified Infineon SLE) is closed. TROPIC01 is fully transparent. For a Ledger engineer who believes in open hardware, this is an ideological step up. Acknowledge the comp delta honestly; compensate with mission and equity."},
+  {flag:'🇬🇧',name:'United Kingdom (lowRISC)',pitch:"Lead with mission alignment — lowRISC engineers are already mission-driven. They understand TROPIC01 because it's philosophically identical to OpenTitan. For post-Brexit British engineers who resent losing EU freedom of movement, Prague is an EU base with an English-language tech ecosystem. 'You get your EU badge back.'"},
+  {flag:'🇮🇱',name:'Israel',pitch:"Lead with the technical peer network — Tropic Square is connected to SatoshiLabs, Trezor, and the global Bitcoin hardware security community. For Israeli engineers motivated by open-source and Bitcoin culture, this is a community play as much as a job. If non-EU passport, address visa clearly and early — don't let it become a late-stage blocker."},
+  {flag:'🇺🇸',name:'USA (OpenTitan / SiFive)',pitch:"Lead with ownership and credit. At Google, OpenTitan contributions are part of a 5,000-person org's output. At Tropic Square, the work is yours — name on the product, speaking slots, direct hardware co-design influence. The pitch only works if the candidate is already Europe-curious. Screen for EU ties (partner, family, prior EU study) before investing in outreach."},
+];
+
+function buildBeyondCEE() {
+  const geoList = document.getElementById('geo-list');
+  GEO_RANK.forEach((g, i) => {
+    const cd = DATA.countries[g.iso];
+    const n = cd ? cd.labCount : 0;
+    geoList.innerHTML += '<li class="gri"><span class="grn">' + (i+1) + '</span>'
+      + '<span class="gflag">' + g.flag + '</span>'
+      + '<span class="gname">' + (cd ? cd.name : g.iso) + '</span>'
+      + '<span class="gtc">' + n + ' named target' + (n===1?'':'s') + '</span>'
+      + '<span class="grat">' + g.rationale + '</span></li>';
+  });
+
+  const rg = document.getElementById('reloc-grid');
+  DATA.relocationPackage.components.forEach(c => {
+    rg.innerHTML += '<div class="relcard"><div class="rcn">' + c.name + '</div>'
+      + '<div class="rcr">' + c.range + '</div>'
+      + '<div class="rcnote">' + c.notes + '</div></div>';
+  });
+  document.getElementById('reloc-note').textContent = DATA.relocationPackage.note;
+
+  const acc = document.getElementById('geo-acc');
+  GEO_PITCH.forEach((g, i) => {
+    const item = document.createElement('div');
+    item.className = 'acci' + (i===0?' open':'');
+    item.innerHTML = '<button class="acct"><span><span class="aflag">' + g.flag + '</span>' + g.name + '</span><span class="aarr">&#9660;</span></button>'
+      + '<div class="accb">' + g.pitch + '</div>';
+    item.querySelector('.acct').addEventListener('click', () => {
+      const was = item.classList.contains('open');
+      document.querySelectorAll('.acci').forEach(x => x.classList.remove('open'));
+      if (!was) item.classList.add('open');
+    });
+    acc.appendChild(item);
+  });
+}
+
+// ===== ADJACENT =====
+function buildAdj() {
+  const grid = document.getElementById('adj-grid');
+  Object.entries(DATA.countries).filter(([,c]) => c.tier==='adjacent').forEach(([iso, pool]) => {
+    pool.labs.forEach(lab => {
+      grid.innerHTML += '<div class="adjcard">'
+        + '<div class="adjt">' + pool.name + '</div>'
+        + '<div class="adjr">' + lab.focus + '</div>'
+        + '<div class="adjch">' + lab.channel + '</div>'
+        + '</div>';
+    });
+  });
+}
+
+// ===== PHASE STRIP =====
+function buildPhase() {
+  document.querySelectorAll('.pbtn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const ph = btn.dataset.ph;
+      document.querySelectorAll('.pbtn').forEach(b => { b.classList.toggle('act', b.dataset.ph===ph); b.setAttribute('aria-selected', b.dataset.ph===ph); });
+      document.querySelectorAll('.ppane').forEach(p => p.classList.toggle('act', p.dataset.ph===ph));
+    });
+  });
+}
+
+// ===== ARCHETYPES =====
+function buildArch() {
+  const tabs = document.getElementById('arch-tabs');
+  const content = document.getElementById('arch-content');
+  DATA.archetypes.forEach((arch, i) => {
+    const tab = document.createElement('button');
+    tab.className = 'atab' + (i===0?' act':'');
+    tab.textContent = arch.label;
+    tab.setAttribute('role','tab');
+    tab.setAttribute('aria-selected', i===0);
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.atab').forEach(t => { t.classList.remove('act'); t.setAttribute('aria-selected',false); });
+      tab.classList.add('act'); tab.setAttribute('aria-selected',true);
+      document.querySelectorAll('.apane').forEach(p => p.classList.remove('act'));
+      document.querySelector('.apane[data-id="'+arch.id+'"]').classList.add('act');
+    });
+    tabs.appendChild(tab);
+
+    const pane = document.createElement('div');
+    pane.className = 'apane' + (i===0?' act':'');
+    pane.dataset.id = arch.id;
+    pane.innerHTML =
+      '<div class="acol"><div class="actitle">Motivations</div><ul>' + arch.motivations.map(m=>'<li>'+m+'</li>').join('') + '</ul></div>'
+      + '<div class="acol"><div class="actitle">Deal-breakers</div><ul>' + arch.dealBreakers.map(d=>'<li>'+d+'</li>').join('') + '</ul></div>'
+      + '<div class="acol"><div class="actitle">Closing levers</div><ul>' + arch.closingLevers.map(l=>'<li>'+l+'</li>').join('') + '</ul></div>'
+      + '<div class="atactic"><strong>Closing tactic:</strong> ' + arch.closingTactic + '</div>';
+    content.appendChild(pane);
+  });
+}
+
+// ===== LEVERS =====
+function buildLevers() {
+  const g = document.getElementById('lev-grid');
+  DATA.closingLevers.forEach((lev, i) => {
+    g.innerHTML += '<div class="lcard2"><div class="lnum">0'+(i+1)+'</div><div class="ltitle">'+lev.title+'</div><div class="ldet">'+lev.detail+'</div></div>';
+  });
+}
+
+// ===== CHANNELS =====
+function buildChannels() {
+  const con = document.getElementById('chan-con');
+  const types = [
+    {key:'platform', label:'Platforms &amp; Boolean searches'},
+    {key:'github',   label:'GitHub organisations to mine systematically'},
+    {key:'conference', label:'Conferences &mdash; 2026 calendar'},
+    {key:'community', label:'Online communities'},
+    {key:'publication', label:'Publication &amp; academic mining'},
+  ];
+  types.forEach(t => {
+    const chs = DATA.channels.filter(c => c.type === t.key);
+    if (!chs.length) return;
+    const grp = document.createElement('div');
+    grp.className = 'cgroup';
+    grp.innerHTML = '<div class="cgtitle">' + t.label + '</div>';
+    const grid = document.createElement('div');
+    grid.className = 'cgrid';
+
+    chs.forEach(ch => {
+      // If has boolean query, render full-width
+      if (ch.queryString) {
+        const fw = document.createElement('div');
+        fw.className = 'ccard';
+        fw.style.gridColumn = '1/-1';
+        const yc = ch.yield==='high' ? '' : 'med';
+        const safe = ch.queryString.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        fw.innerHTML = '<div class="ccn">' + ch.name + ' <span class="cyield '+yc+'">' + ch.yield + '</span></div>'
+          + '<div class="cpurp">' + ch.purpose + '</div>'
+          + (ch.link ? '<div style="margin-top:4px"><a href="'+ch.link+'" target="_blank" rel="noopener" class="clink">'+ch.link+'</a></div>' : '')
+          + '<div class="boolwrap"><pre class="boolblk">'+safe+'</pre>'
+          + '<button class="copybtn" onclick="doCopy(this)">Copy</button></div>';
+        grid.appendChild(fw);
+        return;
+      }
+      const card = document.createElement('div');
+      card.className = 'ccard';
+      const yc = ch.yield==='high' ? '' : 'med';
+      let meta = '';
+      if (t.key==='conference' && ch.date) meta = '<div class="cmeta">'+ch.date+' &middot; '+ch.location+'</div>';
+      card.innerHTML = '<div class="ccn">' + ch.name + ' <span class="cyield '+yc+'">' + ch.yield + '</span></div>'
+        + '<div class="cpurp">' + ch.purpose + '</div>'
+        + meta
+        + (ch.link ? '<div style="margin-top:4px"><a href="'+ch.link+'" target="_blank" rel="noopener" class="clink">'+ch.link+'</a></div>' : '');
+      grid.appendChild(card);
+    });
+    grp.appendChild(grid);
+    con.appendChild(grp);
+  });
+}
+
+function doCopy(btn) {
+  const pre = btn.previousElementSibling;
+  navigator.clipboard.writeText(pre.textContent).then(() => {
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 1800);
+  }).catch(() => { btn.textContent = 'Error'; setTimeout(() => btn.textContent = 'Copy', 1800); });
+}
+
+// ===== 90-DAY TIMELINE =====
+function buildPlan() {
+  const con = document.getElementById('tl-con');
+  DATA.ninetyDayPlan.forEach(m => {
+    const acts = m.actions.slice(0,3).map(a => '<li>' + (a.length>145?a.substring(0,145)+'&hellip;':a) + '</li>').join('');
+    const div = document.createElement('div');
+    div.className = 'tli';
+    div.innerHTML = '<div class="tldot">'+m.move+'</div>'
+      + '<div class="tlph">'+m.phase+'</div>'
+      + '<div class="tltitle">'+m.title+'</div>'
+      + '<ul class="tlacts">'+acts+'</ul>'
+      + '<div class="tlout">'+m.expectedOutcome+'</div>';
+    con.appendChild(div);
+  });
+}
+
+// ===== ASSUMPTIONS =====
+function buildAssump() {
+  const list = document.getElementById('a-list');
+  DATA.assumptions.forEach((a, i) => {
+    list.innerHTML += '<div class="aitem">'
+      + '<div class="anum">'+(i<9?'0':'')+(i+1)+'</div>'
+      + '<div><div class="aclaim">'+a.claim+'</div>'
+      + '<div class="asource">'+a.source+'</div></div></div>';
+  });
+}
+
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded', () => {
+  buildMap();
+  buildCEE();
+  buildBeyondCEE();
+  buildAdj();
+  buildPhase();
+  buildArch();
+  buildLevers();
+  buildChannels();
+  buildPlan();
+  buildAssump();
+});
+</script>
+</body>
+</html>
