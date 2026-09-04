@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Time &amp; Billing — futureproof</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#4A79FF; --charcoal:#282828; --text:#333333; --muted:#69727D;
+    --bg:#F8F8F8; --card:#FFFFFF; --line:#E6E8EC;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Open Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:16px}
+  h1,h2,h3{font-family:'Poppins',system-ui,sans-serif;color:var(--text)}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+  /* Header */
+  header{background:var(--card);border-bottom:1px solid var(--line)}
+  .header-in{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+  .wordmark{font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:var(--text)}
+  .wordmark::before{content:"";display:inline-block;width:0;height:0;border-left:14px solid var(--blue);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-right:9px;vertical-align:-2px}
+  .header-tag{font-size:13px;color:var(--muted)}
+
+  /* Hero */
+  .hero{padding:64px 0 40px}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+  .hero h1{font-size:clamp(28px,5vw,40px);font-weight:700;line-height:1.2;margin-bottom:16px}
+  .hero p{max-width:620px;color:var(--muted);font-size:17px}
+  .hero .engagement{margin-top:20px;display:inline-block;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--blue);padding:10px 16px;font-size:14px;color:var(--text)}
+
+  /* Sections */
+  section.block{padding:40px 0}
+  section.block h2{font-size:24px;font-weight:700;margin-bottom:8px}
+  section.block .sub{color:var(--muted);margin-bottom:24px;max-width:620px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);padding:18px 20px}
+  .card h3{font-size:15px;font-weight:600;margin-bottom:8px}
+  .card p, .card li{font-size:14px;color:var(--text)}
+  .card ul{padding-left:18px}
+  .card li{margin-bottom:6px}
+
+  /* Footer */
+  footer{background:var(--charcoal);color:#fff;margin-top:48px}
+  footer .in{padding:32px 0;font-size:13px;display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between}
+  footer a{color:#fff;text-decoration:underline}
+  footer .fp{font-family:'Poppins',sans-serif;font-weight:600}
+
+  @media (prefers-reduced-motion: reduce){ *{transition:none!important} }
+
+  /* Month rhythm chart */
+  .legend{display:flex;flex-wrap:wrap;gap:10px 18px;margin:14px 0 16px;font-size:13px}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .rhythm{overflow-x:auto;padding-bottom:6px}
+  .rgrid{display:grid;grid-template-columns:150px repeat(36,minmax(16px,1fr));gap:2px;min-width:820px}
+  .rgrid .hd{font-size:10px;color:var(--muted);text-align:center;padding:2px 0;font-family:'Poppins',sans-serif}
+  .rgrid .hd.next{color:var(--blue)}
+  .rgrid .lab{font-size:12.5px;padding:6px 8px 6px 0;color:var(--text)}
+  .rgrid .cell{height:26px;border-radius:3px;background:var(--card);border:1px solid var(--line)}
+  .rgrid .on{border:none}
+  .rgrid .due{outline:2px solid var(--charcoal);outline-offset:-2px}
+  .rnote{font-size:12.5px;color:var(--muted);margin-top:10px;max-width:680px}
+  .badge{display:inline-block;font-size:11px;font-weight:600;font-family:'Poppins',sans-serif;letter-spacing:.04em;padding:2px 8px;border-radius:3px;color:#fff;vertical-align:middle}
+  .unit-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+  .ucard{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--blue);padding:20px 22px}
+  .ucard.u1{border-top-color:#E0872D}
+  .ucard h3{font-size:18px;margin-bottom:4px}
+  .ucard .tool{font-size:13px;color:var(--muted);margin-bottom:14px}
+  .ucard dl{font-size:14px}
+  .ucard dt{font-family:'Poppins',sans-serif;font-weight:600;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+  .ucard dd{margin:2px 0 0}
+  .warn{background:#FFF8E6;border:1px solid #F0D48A;padding:12px 16px;font-size:14px;max-width:680px;margin:16px 0}
+  .callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--blue);padding:12px 16px;font-size:14px;max-width:680px;margin:16px 0}
+  .check{max-width:680px}
+  .check li{margin-bottom:10px;font-size:14.5px;list-style:none;position:relative;padding-left:28px}
+  .check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--blue);font-weight:700;font-family:'Poppins',sans-serif}
+  .bill{background:var(--card);border:1px solid var(--line);padding:18px 22px;max-width:680px;font-size:14.5px;margin:14px 0 22px}
+  .bill b{font-family:'Poppins',sans-serif}
+  .stepnav{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+  .stepnav a{background:var(--card);border:1px solid var(--line);padding:10px 16px;font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <div class="wordmark">futureproof</div>
+    <div class="header-tag">Contractor onboarding · Step 2 — Time &amp; billing</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">You're on the project — now the rhythm</div>
+    <h1>Time tracking &amp; invoicing</h1>
+    <p>Onboarding got you in; this page keeps you paid. Every month follows the same rhythm of forecasts, actuals and one invoice. Learn it once and it runs on autopilot — miss a window and payment slips a whole cycle, so the calendar below is the most valuable thing here.</p>
+    <div class="stepnav">
+      <a href="/onboarding/hcl/">← Step 1 · Onboarding</a>
+    </div>
+    <div class="engagement" style="margin-top:16px">Your onboarding email tells you whether you report as <strong>Unit&nbsp;1</strong> or <strong>Unit&nbsp;2</strong> — the tools differ, the invoice is the same.</div>
+  </div>
+
+  <section class="block" id="rhythm">
+    <h2>Your month at a glance</h2>
+    <p class="sub">Days 1–31 of the worked month, plus the first five days of the next. Outlined cells are hard deadlines.</p>
+    <div class="legend" id="rlegend"></div>
+    <div class="rhythm"><div class="rgrid" id="rgrid"></div></div>
+    <p class="rnote">Unit 1 timesheet upload runs to the <b>3rd working day</b> of the next month — weekends shift it. The invoice window opens on the last day of the worked month and closes on the <b>5th</b>.</p>
+  </section>
+
+  <section class="block" id="units">
+    <h2>Unit 1 or Unit 2 — your reporting lane</h2>
+    <p class="sub">Same engagement, two reporting systems. You are in exactly one.</p>
+    <div class="unit-cards">
+      <div class="ucard u1">
+        <h3>Unit 1 <span class="badge" style="background:#E0872D">Power Apps</span></h3>
+        <div class="tool">MSD Effort Management Application</div>
+        <dl>
+          <dt>20th – 22nd</dt><dd>Log actual effort to date <b>and</b> submit next month's forecast. Automated daily reminders run during the window.</dd>
+          <dt>27th – 29th</dt><dd>Adjust and finalise this month's actual hours.</dd>
+          <dt>28th – 3rd working day</dt><dd>Upload your MSD-approved timesheet.</dd>
+          <dt>Absence &amp; overtime</dt><dd>Standard MSD project approvals.</dd>
+          <dt>Support</dt><dd>Contact details are in your onboarding email.</dd>
+        </dl>
+      </div>
+      <div class="ucard">
+        <h3>Unit 2 <span class="badge" style="background:var(--blue)">futureproof form</span></h3>
+        <div class="tool">futureproof Working Hours Forecast</div>
+        <dl>
+          <dt>By the 19th</dt><dd>Submit your total monthly hours forecast. Updates accepted until the <b>26th</b>; only resubmit when plans change — the latest entry wins.</dd>
+          <dt>Hours only</dt><dd>Report in <b>hours</b>. Man-days (MDs) are not accepted.</dd>
+          <dt>Actuals</dt><dd>Declared through your monthly invoice — no separate actuals step.</dd>
+          <dt>Vacation</dt><dd>Get MSD project-level approval <b>before</b> updating the forecast.</dd>
+          <dt>Overtime</dt><dd>Prior written approval from <b>both</b> the MSD Project Manager and the HCL Manager.</dd>
+          <dt>Support</dt><dd>Roman Csutkai · <a href="mailto:office@fproof.eu">office@fproof.eu</a> · +420&nbsp;732&nbsp;463&nbsp;511</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="warn"><b>Why the windows matter:</b> Unit 1 submissions arriving after the window defer your payment to the next cycle — a month's wait for a day's delay. Unit 2 forecasts feed the client's budget allocation: invoices are paid on actual hours, exact matching isn't required, but consistently accurate forecasting is mandatory.</div>
+  </section>
+
+  <section class="block" id="invoicing">
+    <h2>One invoice a month — done right</h2>
+    <p class="sub">Send between the last day of the worked month and the 5th of the following month, to <a href="mailto:invoices@fproof.eu"><b>invoices@fproof.eu</b></a>. Invoice once your timesheet is approved.</p>
+
+    <div class="bill">
+      <b>Bill to:</b><br>
+      futureproof s.r.o.<br>
+      Dvořákova 1432/4, 251 01 Říčany, Czech Republic<br>
+      IČO: 04533640 · DIČ: CZ04533640<br>
+      Registered under File C 249245, Municipal Court in Prague
+    </div>
+
+    <h3 style="font-size:17px;font-weight:600;margin:6px 0 12px">The correct-invoice checklist</h3>
+    <ul class="check">
+      <li><b>Your identification matches your agreement exactly</b> — legal name, registered address, IČO/registration number, VAT ID where applicable.</li>
+      <li><b>Sequential, unique invoice number</b> from your own numbering series.</li>
+      <li><b>Issue date</b> = the date you actually submit.</li>
+      <li><b>Taxable supply date (DUZP)</b> = the last calendar day of the worked month.</li>
+      <li><b>Approved timesheet attached</b> where generated (Unit 1 always; Unit 2 where available).</li>
+      <li><b>Hours × rate per your agreement</b>, currency as contracted.</li>
+    </ul>
+
+    <div class="callout"><b>Payment:</b> due within the term stated in your agreement — typically <b>45 days from receipt of a correct invoice</b>. In practice payment often lands faster, especially in your first months of cooperation. The clock starts when a correct invoice is received; an incorrect one is returned for fixing, so the checklist above is literally money.</div>
+
+    <h3 style="font-size:17px;font-weight:600;margin:22px 0 12px">VAT — pick your line</h3>
+    <div class="cards">
+      <div class="card"><h3>Czech VAT payer</h3><p>Apply the standard Czech VAT rate of <b>21%</b>.</p></div>
+      <div class="card"><h3>Intra-EU VAT-registered</h3><p>Apply <b>0% VAT</b> and include the mandatory clause: <i>"Subject to reverse charge mechanism"</i>. Your VAT ID (country prefix + number) must appear on the invoice.</p></div>
+      <div class="card"><h3>Non-EU entity</h3><p>Invoice per the applicable cross-border service tax treaty — align with your tax adviser; we'll confirm the layout works on our side.</p></div>
+    </div>
+
+    <div class="callout" style="margin-top:18px"><b>Tooling tip:</b> cloud invoicing tools with native Czech/EU tax alignment — <b>Fakturoid</b>, <b>SuperFaktura</b> or similar — get all of the above right by default. We're happy to check your first invoice layout before you send it.</div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap in">
+    <div><span class="fp">futureproof</span> s.r.o. · Dvořákova 1432/4, Říčany, Czech Republic · IČO 04533640</div>
+    <div><a href="/onboarding/hcl/">Onboarding · Step 1</a> · <a href="https://fproof.eu/privacy/">Privacy notice</a> · <a href="mailto:office@fproof.eu">office@fproof.eu</a></div>
+  </div>
+</footer>
+
+<script>
+// ── DATA — monthly rhythm; edit windows here if the process changes ──────────
+const LANES = [
+  {label:'Unit 2 · forecast', color:'#4A79FF', spans:[[19,19,'due'],[20,26,'']], note:'due 19th, updates until 26th'},
+  {label:'Unit 1 · forecast + actuals', color:'#E0872D', spans:[[20,22,'']]},
+  {label:'Unit 1 · finalise actuals', color:'#E0872D', spans:[[27,29,'']]},
+  {label:'Unit 1 · timesheet upload', color:'#E0872D', spans:[[28,34,'']]},
+  {label:'Invoice → invoices@fproof.eu', color:'#2A9D6F', spans:[[31,36,'due']]},
+];
+// grid columns: 1..31 = worked month, 32..36 = 1st..5th of next month
+(function(){
+  const g=document.getElementById('rgrid'), lg=document.getElementById('rlegend');
+  const seen={};
+  LANES.forEach(l=>{ if(!seen[l.color]){seen[l.color]=1; lg.insertAdjacentHTML('beforeend',`<span><i class="sw" style="background:${l.color}"></i>${l.label.split('·')[0].trim()}</span>`);} });
+  lg.insertAdjacentHTML('beforeend','<span><i class="sw" style="background:#fff;outline:2px solid var(--charcoal);outline-offset:-2px"></i>hard deadline</span>');
+  g.insertAdjacentHTML('beforeend','<div class="hd"></div>');
+  for(let d=1;d<=31;d++) g.insertAdjacentHTML('beforeend',`<div class="hd">${d}</div>`);
+  for(let d=1;d<=5;d++) g.insertAdjacentHTML('beforeend',`<div class="hd next">${d}'</div>`);
+  LANES.forEach(l=>{
+    g.insertAdjacentHTML('beforeend',`<div class="lab">${l.label}</div>`);
+    for(let c=1;c<=36;c++){
+      let cls='cell', style='';
+      l.spans.forEach(s=>{ if(c>=s[0]&&c<=s[1]){cls='cell on'+(s[2]==='due'?' due':''); style=`background:${l.color}`;} });
+      g.insertAdjacentHTML('beforeend',`<div class="${cls}" style="${style}"></div>`);
+    }
+  });
+})();
+</script>
+</body>
+</html>
