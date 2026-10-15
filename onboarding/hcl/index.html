@@ -135,7 +135,7 @@
   <div class="hero">
     <div class="eyebrow">Welcome to the team</div>
     <h1>Your onboarding, step by step</h1>
-    <p>Congratulations on the assignment. This page walks you through everything between now and your first day — what we handle, what we need from you, and how long each step takes. In the normal case it takes about sixteen working days from confirmation to your first login — the timing section below shows exactly where each day goes.</p>
+    <p>Congratulations on the assignment. This page walks you through everything between now and your first day — what we handle, what we need from you, and how long each step takes. In the normal case it takes about seventeen working days from confirmation to your first login — the timing section below shows exactly where each day goes.</p>
     <div class="engagement">Engagement: <strong>HCL Technologies Czech Republic → MSD</strong> · regulated pharmaceutical environment (GxP)</div>
     <p style="margin-top:14px;font-size:14px"><a href="/onboarding/hcl-billing/">Already onboarded? Step 2 · Time &amp; billing →</a></p>
   </div>
@@ -155,9 +155,9 @@
     <div class="step">
       <div class="step-num">2</div>
       <h3>Data submission</h3>
-      <p class="lede">One short form collects the details that go into your agreement: registration data, contact, and banking. About five minutes.</p>
+      <p class="lede">One form collects the details that go into your agreement — who is contracting, who signs, who does the work — plus the personal details we need to start your background check. About ten minutes.</p>
       <div class="actors">
-        <div class="actor you"><b>You</b>Fill in the <a href="https://forms.gle/veqfDhiYYUovYvxY7">onboarding form&nbsp;🔗</a>. Banking can follow later — the rest we need now.</div>
+        <div class="actor you"><b>You</b>Fill in the <a href="https://forms.gle/sTafUqJHZhwDKGTt7">onboarding form&nbsp;🔗</a>. If you contract through a company, the person who signs fills it in. Banking can follow later — the rest we need now.</div>
         <div class="actor us"><b>futureproof</b>Checks your data and generates your final agreement from it. No re-typing, no transcription errors.</div>
       </div>
       <p class="note"><b>VAT ID:</b> for intra-EU invoicing we need your VAT number valid for reverse charge (country prefix + number, e.g. PL…, DE…). If you are not yet registered for intra-Community transactions, start that with your accountant now — it can take up to two weeks.</p>
@@ -199,7 +199,7 @@
 
   <section class="block" id="timing">
     <h2>How long it takes — and who holds the ball</h2>
-    <p class="sub">Sixteen working days from confirmation to your first login, in the normal case. Every day belongs to one party; the strip shows whose.</p>
+    <p class="sub">Seventeen working days from confirmation to your first login, in the normal case. Every day belongs to one party; the strip shows whose.</p>
 
     <div class="legend" id="legend"></div>
     <div class="strip" id="strip"></div>
@@ -208,7 +208,7 @@
 
     <div class="steps" id="steps"></div>
 
-    <div class="callout">Steps 11–15 are scheduled <b>against your start date</b>, not straight after the background check — HCL and MSD typically open accounts no earlier than about a week before you start. If your start is later than the check completes, you'll simply have a quiet gap in between; that's normal.</div>
+    <div class="callout">Steps 11–16 are scheduled <b>against your start date</b>, not straight after the background check — HCL and MSD typically open accounts no earlier than about a week before you start. If your start is later than the check completes, you'll simply have a quiet gap in between; that's normal.</div>
   </section>
 
   <section class="block" id="scaut">
@@ -243,16 +243,66 @@
     </div>
   </section>
 
+  <section class="block" id="avd">
+    <h2>Your MSD virtual desktop (AVD)</h2>
+    <p class="sub">You will work on an Azure Virtual Desktop provided by MSD. MSD creates it; you prepare your side. Your welcome email from MSD carries your personal details (ISID, desktop name, support contacts) — keep it.</p>
+
+    <h3 style="font-size:17px;font-weight:600;margin:6px 0 10px">Before the first login</h3>
+    <div class="cards">
+      <div class="card"><h3>1 · Your computer</h3><ul>
+        <li>64-bit Windows 10 or newer, or macOS Monterey (12.3) or newer; 8&nbsp;GB RAM, 4 CPU cores</li>
+        <li>Fallback: an up-to-date Edge or Chrome browser works too</li>
+        <li>Connection: 10&nbsp;Mbps or better, latency under 150&nbsp;ms is ideal</li>
+        <li>On a corporate or restricted network, ask local IT to allow TCP/UDP 443, 3390, 3478 and 38300–38500</li></ul></div>
+      <div class="card"><h3>2 · Two phone apps</h3><ul>
+        <li><b>Microsoft Authenticator</b> (App Store / Google Play)</li>
+        <li><b>Symantec VIP Access</b> (App Store / Google Play, or <a href="https://vip.symantec.com" target="_blank" rel="noopener">vip.symantec.com</a>)</li>
+        <li>MFA is on by default; you cannot log in from outside MSD without it</li></ul></div>
+      <div class="card"><h3>3 · Register your VIP credential</h3><ul>
+        <li>Open VIP Access and note the <b>Credential ID</b> — 4 letters followed by 8 digits</li>
+        <li>Send it together with your <b>ISID</b> to your MSD manager; they raise the request that registers it</li>
+        <li>Until it is registered, login will not complete — do this the day the welcome email arrives</li></ul></div>
+    </div>
+
+    <h3 style="font-size:17px;font-weight:600;margin:26px 0 10px">First login</h3>
+    <div class="steps">
+      <div class="srow"><div class="day">1</div><div class="chip" style="background:#2A9D6F">C</div><div class="t">Install the <b>Windows App</b><small>Windows: the Windows App download from Microsoft. Mac: the App Store. Admin rights are needed to install.</small></div><div class="dur">5 min</div></div>
+      <div class="srow"><div class="day">2</div><div class="chip" style="background:#2A9D6F">C</div><div class="t">Open it, choose <b>Sign in</b>, enter your ISID in the e-mail format shown in the welcome email<small>Use the temporary password from the welcome email. Resetting the first-time password is optional.</small></div><div class="dur">5 min</div></div>
+      <div class="srow"><div class="day">3</div><div class="chip" style="background:#2A9D6F">C</div><div class="t">Complete the MFA prompt<small>Authenticator approval, or the six-digit code from VIP Access when asked.</small></div><div class="dur">2 min</div></div>
+      <div class="srow"><div class="day">4</div><div class="chip" style="background:#2A9D6F">C</div><div class="t">Double-click your workspace to connect, allow the remote connection, and wait<small>Desktops are powered off when idle — the first start takes about two minutes.</small></div><div class="dur">~2 min</div></div>
+      <div class="srow"><div class="day">5</div><div class="chip" style="background:#2A9D6F">C</div><div class="t">Take the <b>mandatory AVD training course</b> named in the welcome email<small>Do it in your first days; it is a condition of MSD access.</small></div><div class="dur">short</div></div>
+    </div>
+
+    <h3 style="font-size:17px;font-weight:600;margin:26px 0 10px">Good to know</h3>
+    <div class="dd">
+      <div class="card"><h3>How the desktop behaves</h3><ul>
+        <li>Session locks after <b>15 minutes</b> idle — click <b>Reconnect</b></li>
+        <li>Disconnects after 3 hours idle, powers off one hour later</li>
+        <li>Log off and the machine shuts down; next start takes ~2 minutes</li>
+        <li>No login for <b>30 days</b> → the desktop is deleted permanently</li>
+        <li>Nothing on the local disk is backed up — <b>keep files in OneDrive</b></li></ul></div>
+      <div class="card"><h3>What you can't do</h3><ul>
+        <li>Copy from the desktop and paste to your own computer — blocked by policy</li>
+        <li>Print from the desktop to your own printer</li>
+        <li>Install software yourself — no admin rights; use Software Center</li>
+        <li>Host applications or services on it</li></ul></div>
+    </div>
+
+    <div class="callout"><b>If it won't connect:</b> restart the desktop first (self-service in Nerdio Manager — the quick-reference guide attached to your welcome email shows how), then raise a ticket with MSD's support centre — <b>by phone</b>, not by email alone. Have ready: desktop name, your ISID, the error or a screenshot, where you are connecting from, when it started, and that you tried a restart. If you are still stuck after that, tell Roman or Jiří — we will chase it with you.</div>
+  </section>
+
   <section class="block">
     <h2>Have these ready</h2>
-    <p class="sub">Five minutes of preparation makes every step above faster.</p>
+    <p class="sub">Ten minutes of preparation makes every step above faster.</p>
     <div class="cards">
       <div class="card"><h3>Business identity</h3>
         <ul><li>Registration number (IČO / national equivalent)</li><li>VAT ID with country prefix (or registration in progress)</li><li>Registered address exactly as in the register</li></ul></div>
       <div class="card"><h3>For the background check</h3>
-        <ul><li>Identity document (passport or national ID)</li><li>Education &amp; employment history consistent with your CV</li><li>Address history without gaps</li><li>Date of birth (needed to initiate the check)</li></ul></div>
+        <ul><li>Identity document (passport or national ID)</li><li>Education &amp; employment history consistent with your CV</li><li>Address history without gaps</li><li>Date of birth, home address and mobile phone of <b>the person who will do the work</b> (needed to initiate the check)</li></ul></div>
       <div class="card"><h3>Banking (can follow later)</h3>
         <ul><li>Czech local account, or</li><li>IBAN + SWIFT/BIC, or</li><li>Account number + routing code + SWIFT (non-IBAN countries)</li></ul></div>
+      <div class="card"><h3>For your virtual desktop</h3>
+        <ul><li>A 64-bit Windows 10+ or macOS 12.3+ computer, 8&nbsp;GB RAM, 4 cores</li><li>A smartphone for two authenticator apps</li><li>A stable connection (10&nbsp;Mbps or better) — see <a href="#avd">the AVD section</a></li></ul></div>
     </div>
   </section>
 
@@ -312,8 +362,9 @@ const STEPS = [
   {n:11, a:'H', d:1, t:'HCL / MSD orientation session', phase:'Toward your start date'},
   {n:12, a:'M', d:1, t:'Online identity verification'},
   {n:13, a:'H', d:1, t:'Cybersecurity and mandatory compliance training'},
-  {n:14, a:'M', d:1, t:'MSD account creation'},
-  {n:15, a:'M', d:1, t:'VDI remote access set up — you\'re in'},
+  {n:14, a:'M', d:1, t:'MSD ID (ISID) and account creation'},
+  {n:15, a:'M', d:1, t:'MSD provisions your virtual desktop (AVD)', s:'Best case one day after your ISID exists. MSD sends a welcome email with your ISID and setup instructions.'},
+  {n:16, a:'C', d:1, t:'You install the Windows App, register MFA and sign in — you\'re in', s:'See the AVD section below. Do it the day the welcome email arrives.'},
 ];
 // ────────────────────────────────────────────────────────────────────────────
 (function(){
