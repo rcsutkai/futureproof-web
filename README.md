@@ -7,6 +7,7 @@ futureproof public web deliverables
 |---|---|---|---|---|
 | HCL/MSD Contractor Onboarding — Step 1 | onboarding | hcl | 2026-09-01 | https://prezentacia.fproof.eu/onboarding/hcl/ |
 | HCL/MSD Time & Billing — Step 2 | onboarding | hcl-billing | 2026-09-04 | https://prezentacia.fproof.eu/onboarding/hcl-billing/ |
+| futureproof — Company Introduction 2026 (public) | presentations | intro-deck | 2026-10-15 | https://prezentacia.fproof.eu/presentations/intro-deck/ |
 
 ## Unpublished
 

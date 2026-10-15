@@ -3,3 +3,4 @@ Disallow: /presentations/theorema-intel/
 Disallow: /dashboard/
 Disallow: /presentations/tropic-square-fw-sourcing/
 Disallow: /onboarding/
+Disallow: /presentations/intro-deck/
